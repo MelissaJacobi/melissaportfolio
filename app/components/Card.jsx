@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Card({ imgUrl, projectName, softwares }) {
   return (
-    <Link href={`/${encodeURIComponent(projectName.toLowerCase())}`}>
+    <Link href={`/${encodeURIComponent(projectName?.toLowerCase() || '')}`}>
       <div className="relative group w-[25rem] h-[30rem] rounded-[4.5rem] overflow-hidden shadow-md duration-300 cursor-pointer">
         {/* Image */}
         <img
