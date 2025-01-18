@@ -26,19 +26,24 @@ const Navbar = () => {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className="sticky top-0 z-10 flex justify-center flex-wrap px-[7rem] bg-black transition-colors duration-300">
-        <button className="font-quicksand px-4 py-2 m-4 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
-          <Link href="/graphics">Graphics</Link>
-        </button>
-        <button className="font-quicksand px-4 py-2 m-4 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
-          <Link href="/print">Print</Link>
-        </button>
-        <button className="font-quicksand px-4 py-2 m-4 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
-          <Link href="/branding">Branding</Link>
-        </button>
-        <button className="font-quicksand px-4 py-2 m-4 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
-          <Link href="/video">Video</Link>
-        </button>
+      <nav
+        className="sticky top-0 z-10 flex justify-center items-center h-[4rem] px-4 sm:px-[7rem] bg-black transition-colors duration-300"
+        style={{ height: "4rem" }}
+      >
+        <div className="hidden sm:flex space-x-4">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
+            <Link href="/graphics">Graphics</Link>
+          </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
+            <Link href="/print">Print</Link>
+          </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
+            <Link href="/branding">Branding</Link>
+          </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
+            <Link href="/video">Video</Link>
+          </button>
+        </div>
       </nav>
 
       {/* Logo */}
@@ -79,8 +84,9 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex flex-col justify-start items-center p-4 bg-[#161616] w-[15rem] h-[15rem] rounded-b-[4rem] rounded-l-[4rem] shadow-lg">
-            <button className="text-white p-2 mt-10 font-quicksand duration-300 hover:translate-x-1">
+          <div className="flex flex-col justify-start items-center p-4 bg-[#161616] w-[15rem] h-screen rounded-l-[4rem] shadow-lg space-y-4">
+            {/* Static Menu Links */}
+            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/">Home</Link>
             </button>
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
@@ -89,6 +95,21 @@ const Navbar = () => {
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/contact">Contact</Link>
             </button>
+            {/* Navbar Items for Small Screens */}
+            <div className="flex flex-col items-center sm:hidden space-y-4">
+              <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+                <Link href="/graphics">Graphics</Link>
+              </button>
+              <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+                <Link href="/print">Print</Link>
+              </button>
+              <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+                <Link href="/branding">Branding</Link>
+              </button>
+              <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+                <Link href="/video">Video</Link>
+              </button>
+            </div>
           </div>
         </div>
       )}
