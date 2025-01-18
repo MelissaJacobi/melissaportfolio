@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header'; // Import the new Header component
 
 export const metadata = {
-  title: 'My Portfolio',
+  title: "Melissa's Porfolio",
   description: 'A showcase of my work',
 };
 

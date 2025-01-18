@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { FaChevronDown } from "react-icons/fa6";
 
 export default function Header() {
   const pathname = usePathname();
@@ -23,7 +24,7 @@ export default function Header() {
   // Enhanced parallax styles with greater separation between layers
   const parallaxStyles = [
     { transform: `translateY(calc(${-scrollY * 0.05}px + 4px))` }, // 1.svg (farthest)
-    { transform: `translateY(calc(${-scrollY * 0.15}px + 30px))` }, // 2.svg
+    { transform: `translateY(calc(${-scrollY * 0.15}px + 80px))` }, // 2.svg
     { transform: `translateY(calc(${-scrollY * 0.3}px + 190px))` }, // 3.svg
     { transform: `translateY(calc(${-scrollY * 0.5}px + 400px))` }, // 4.svg (closest)
   ];
@@ -37,7 +38,7 @@ export default function Header() {
             key={num}
             src={`/${num}.svg`}
             alt={`Parallax Layer ${num}`}
-            className={`absolute w-full`}
+            className={`absolute w-[110%]`}
             style={{
               ...parallaxStyles[index],
               bottom: 0, // Position at the bottom of the container
@@ -51,6 +52,11 @@ export default function Header() {
           <h1 className="font-quicksand text-4xl font-bold text-black text-center px-4">
             {headerText}
           </h1>
+        </div>
+
+        {/* Scroll Down Indicator */}
+        <div className="absolute bottom-8 left-0 w-full flex justify-center">
+          <FaChevronDown className="text-white text-3xl animate-bounce" />
         </div>
       </div>
     </header>
