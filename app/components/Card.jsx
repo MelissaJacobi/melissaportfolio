@@ -13,12 +13,12 @@ export default function Card({ imgUrl, projectName, softwares }) {
           className="w-full h-full object-cover rounded-[4.5rem] group-hover:scale-105 duration-300"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-60 rounded-[4.5rem] opacity-0 group-hover:opacity-100 duration-300 flex flex-col justify-center items-center text-center p-4">
-          <h2 className="font-quicksand text-xl font-bold text-white">
+        <div className="absolute inset-0 bg-[rgb(251,83,115)] bg-opacity-70 rounded-[4.5rem] opacity-0 group-hover:opacity-100 duration-300 flex flex-col justify-center items-center text-center p-4">
+          <h2 className="font-quicksand text-xl font-bold text-black">
             {projectName}
           </h2>
-          <h3 className="mt-2 text-gray-300 font-medium">Softwares Used:</h3>
-          <ul className="mt-1 text-gray-400 list-none ">
+          <h3 className="mt-2 text-gray-900 font-semibold">Softwares Used:</h3>
+          <ul className="mt-1 text-gray-800 list-none ">
             {softwares.map((software, index) => (
               <li key={index}>{software}</li>
             ))}
