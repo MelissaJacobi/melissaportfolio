@@ -26,7 +26,7 @@ export default function Header() {
     { transform: `translateY(calc(${-scrollY * 0.05}px + 4px))` }, // 1.svg (farthest)
     { transform: `translateY(calc(${-scrollY * 0.15}px + 80px))` }, // 2.svg
     { transform: `translateY(calc(${-scrollY * 0.3}px + 190px))` }, // 3.svg
-    { transform: `translateY(calc(${-scrollY * 0.5}px + 400px))` }, // 4.svg (closest)
+    { transform: `translateY(calc(${-scrollY * 0.5}px + 450px))` }, // 4.svg (closest)
   ];
 
   return (
