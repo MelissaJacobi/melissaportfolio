@@ -49,7 +49,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="fixed top-0 left-0 p-4 z-30">
         <img
-          src={isScrolled ? "/logo.png" : "/logowhite.png"}
+          src={isScrolled ? "/logo.png" : "/logoblack.svg"}
           alt="Logo"
           className="w-24 h-auto transition-all duration-300"
         />
@@ -62,17 +62,17 @@ const Navbar = () => {
       >
         <div
           className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 ${
-            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-white"
+            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-black"
           } ${isOpen ? "rotate-45 translate-y-2" : "hover:translate-x-1"}`}
         ></div>
         <div
           className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 ${
-            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-white"
+            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-black"
           } ${isOpen ? "opacity-0" : "hover:scale-125"}`}
         ></div>
         <div
           className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 ${
-            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-white"
+            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-black"
           } ${isOpen ? "-rotate-45 -translate-y-2" : "hover:translate-x-1"}`}
         ></div>
       </div>
