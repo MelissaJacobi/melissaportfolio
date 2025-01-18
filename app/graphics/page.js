@@ -1,11 +1,12 @@
 "use client";
 import Card from "../components/Card";
 
+
 export default function Graphics() {
   const projects = [
     {
-      imgUrl: "/elfheim.jpg",
-      projectName: "Elfheim",
+      imgUrl: "/dellamatritch-low.jpg",
+      projectName: "Dellamatritch",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
@@ -14,6 +15,7 @@ export default function Graphics() {
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
   ];
+
 
   return (
     <div className="flex flex-wrap justify-center gap-6 p-6">
