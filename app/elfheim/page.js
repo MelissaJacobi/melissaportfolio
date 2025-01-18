@@ -1,5 +1,5 @@
 "use client";
-import styles from "./Elfheim.module.css";
+import styles from "./elfheim.module.css";
 
 export default function Elfheim({ params }) {
   const { projectName } = params;
