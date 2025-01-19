@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Header /> {/* Render the dynamic header */}
+        <Header />
         <Navbar />
         <main>{children}</main>
       </body>

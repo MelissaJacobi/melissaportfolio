@@ -26,7 +26,7 @@ export default function Header() {
     { transform: `translateY(calc(${-scrollY * 0.05}px + 4px))` }, // 1.svg (farthest)
     { transform: `translateY(calc(${-scrollY * 0.15}px + 80px))` }, // 2.svg
     { transform: `translateY(calc(${-scrollY * 0.3}px + 190px))` }, // 3.svg
-    { transform: `translateY(calc(${-scrollY * 0.5}px + 450px))` }, // 4.svg (closest)
+    { transform: `translateY(calc(${-scrollY * 0.5}px + 500px))` }, // 4.svg (closest)
   ];
 
   return (
@@ -48,8 +48,8 @@ export default function Header() {
         ))}
 
         {/* Header Text */}
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <h1 className="font-quicksand text-4xl font-bold text-black text-center px-4">
+        <div className="absolute top-0 left-0 w-full h-full flex items-start justify-center pt-[8rem]">
+          <h1 className="font-quicksand text-[5rem] font-bold text-black text-center px-4">
             {headerText}
           </h1>
         </div>
