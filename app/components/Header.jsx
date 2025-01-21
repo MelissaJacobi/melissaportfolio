@@ -23,11 +23,12 @@ export default function Header() {
 
   // Enhanced parallax styles with greater separation between layers
   const parallaxStyles = [
+
     { transform: `translateY(calc(${-scrollY * 0.05}px + 50px))` }, // 1.svg (farthest)
     { transform: `translateY(calc(${-scrollY * 0.15}px + 150px))` }, // 2.svg
     { transform: `translateY(calc(${-scrollY * 0.3}px + 350px))` }, // 3.svg
     { transform: `translateY(calc(${-scrollY * 0.5}px + 600px))` }, // 4.svg (closest)
-  ];
+];
 
   return (
     <header>
@@ -48,8 +49,8 @@ export default function Header() {
         ))}
 
         {/* Header Text */}
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <h1 className="font-quicksand text-4xl font-bold text-black text-center px-4">
+        <div className="absolute top-0 left-0 w-full h-full flex items-start justify-center pt-[8rem]">
+          <h1 className="font-quicksand text-[5rem] font-bold text-black text-center px-4">
             {headerText}
           </h1>
         </div>
