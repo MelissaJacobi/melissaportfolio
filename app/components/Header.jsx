@@ -23,11 +23,12 @@ export default function Header() {
 
   // Enhanced parallax styles with greater separation between layers
   const parallaxStyles = [
-    { transform: `translateY(calc(${-scrollY * 0.05}px + 4px))` }, // 1.svg (farthest)
-    { transform: `translateY(calc(${-scrollY * 0.15}px + 80px))` }, // 2.svg
-    { transform: `translateY(calc(${-scrollY * 0.3}px + 190px))` }, // 3.svg
-    { transform: `translateY(calc(${-scrollY * 0.5}px + 500px))` }, // 4.svg (closest)
-  ];
+
+    { transform: `translateY(calc(${-scrollY * 0.05}px + 50px))` }, // 1.svg (farthest)
+    { transform: `translateY(calc(${-scrollY * 0.15}px + 150px))` }, // 2.svg
+    { transform: `translateY(calc(${-scrollY * 0.3}px + 350px))` }, // 3.svg
+    { transform: `translateY(calc(${-scrollY * 0.5}px + 600px))` }, // 4.svg (closest)
+];
 
   return (
     <header>
