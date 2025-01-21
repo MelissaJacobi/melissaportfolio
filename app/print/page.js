@@ -6,7 +6,7 @@ export default function Graphics() {
   const projects = [
     {
       imgUrl: "/can-mockup.jpg",
-      projectName: "Driftale",
+      projectName: "Driftstone",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
   ];

@@ -1,5 +1,5 @@
 "use client";
-import styles from "./driftale.module.css";
+import styles from "./driftstone.module.css";
 
 
 export default function Elfheim({ params }) {
@@ -29,7 +29,7 @@ export default function Elfheim({ params }) {
         </div>
 
       <div className={styles.container}>
-        <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Mockups</h2>
+        <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Variations</h2>
         <div className={`${styles.gallery} ${styles.gallerySm}`}></div>
         <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>
