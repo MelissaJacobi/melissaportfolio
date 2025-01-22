@@ -27,20 +27,30 @@ const Navbar = () => {
     <>
       {/* Navigation Bar */}
       <nav
-        className="sticky top-0 z-10 flex justify-center items-center h-[4rem] px-4 sm:px-[7rem] bg-black transition-colors duration-300"
+        className="sticky top-0 z-10 flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] bg-black transition-colors duration-300 opacity-75"
         style={{ height: "4rem" }}
       >
-        <div className="hidden sm:flex space-x-4">
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
+        {/* Links visible on large screens */}
+        <div className="hidden lg:flex space-x-4">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
+            <Link href="/">Home</Link>
+          </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
+            <Link href="/about">About</Link>
+          </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
+            <Link href="/contact">Contact</Link>
+          </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
             <Link href="/graphics">Graphics</Link>
           </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
             <Link href="/print">Print</Link>
           </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
             <Link href="/branding">Branding</Link>
           </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] rounded-full bg-gradient-to-r from-[rgb(251,83,115)] to-[rgb(255,164,0)] text-black font-semibold duration-300 hover:translate-y-1">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
             <Link href="/video">Video</Link>
           </button>
         </div>
@@ -55,9 +65,9 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Hamburger Menu */}
+      {/* Hamburger Menu (Visible on medium screens and below) */}
       <div
-        className="fixed top-0 right-0 p-4 z-40 flex flex-col items-center justify-center cursor-pointer transition-all duration-300"
+        className="fixed top-0 right-0 p-4 z-40 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div
@@ -85,7 +95,6 @@ const Navbar = () => {
           }`}
         >
           <div className="flex flex-col justify-start items-center p-4 bg-[#161616] w-[15rem] h-screen rounded-l-[4rem] shadow-lg space-y-4">
-            {/* Static Menu Links */}
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/">Home</Link>
             </button>
@@ -95,21 +104,18 @@ const Navbar = () => {
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/contact">Contact</Link>
             </button>
-            {/* Navbar Items for Small Screens */}
-            <div className="flex flex-col items-center sm:hidden space-y-4">
-              <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-                <Link href="/graphics">Graphics</Link>
-              </button>
-              <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-                <Link href="/print">Print</Link>
-              </button>
-              <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-                <Link href="/branding">Branding</Link>
-              </button>
-              <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-                <Link href="/video">Video</Link>
-              </button>
-            </div>
+            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+              <Link href="/graphics">Graphics</Link>
+            </button>
+            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+              <Link href="/print">Print</Link>
+            </button>
+            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+              <Link href="/branding">Branding</Link>
+            </button>
+            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+              <Link href="/video">Video</Link>
+            </button>
           </div>
         </div>
       )}

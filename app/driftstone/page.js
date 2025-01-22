@@ -8,7 +8,7 @@ export default function Elfheim({ params }) {
   return (
     <div className={styles.container}>
       {/* Main Section */}
-      <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
+      <div className={`${styles.mainSection}`}>
         <div className={styles.mainImageContainer}>
           <img
             src="/driftstone-hero-01.jpg"
@@ -20,8 +20,8 @@ export default function Elfheim({ params }) {
       </div>
 
       <div className={styles.textContainer}>
-          <h2 className={`${styles.title} ${styles.titleLg} ${styles.overview} ${styles.container}`}>Overview</h2>
-          <p className={`${styles.paragraph} ${styles.paragraphLg}`}>
+          <h2 className={`${styles.title}`}>Overview</h2>
+          <p className={`${styles.paragraph} `}>
           Driftstone is a small craft brewery nestled in the heart of British Columbia, inspired by the province’s rugged landscapes and adventurous spirit
           This project focused on creating can designs for three distinct Driftstone Ale flavors: Wheat Ale, Pale Ale, and Amber Ale. The challenge was to ensure each can had its own identity while maintaining a cohesive brand image.
           To achieve this balance, the designs shared a color palette, but  featured a different central image: a bridge, a plane, and a boat.
@@ -29,7 +29,7 @@ export default function Elfheim({ params }) {
         </div>
 
       <div className={styles.container}>
-        <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Variations</h2>
+        <h2 className={`${styles.title}`}>Variations</h2>
         <div className={`${styles.gallery} ${styles.gallerySm}`}></div>
         <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>

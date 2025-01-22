@@ -19,10 +19,6 @@
   gap: 2.5rem;
 }
 
-.mainSectionLg {
-  flex-direction: column;
-}
-
 .mainImageContainer {
   flex: 1;
   display: flex;
@@ -35,6 +31,7 @@
   border-radius: 4.5rem;
   margin-top: 8rem;
   transition: transform 0.3s;
+  margin-bottom: 2rem;
 }
 
 .mockupImage {
@@ -60,23 +57,13 @@
 .title {
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.titleLg {
   font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 .overview {
   margin-top: 8rem;
-}
-
-
-@media (max-width: 600px) {
-  .overview {
-    margin-top: 8rem;
-  }
 }
 
 .paragraph {
@@ -84,58 +71,6 @@
   font-size: 1.125rem;
   line-height: 2rem;
   margin-bottom: 2rem;
-}
-
-.paragraphLg {
-  font-size: 1.25rem;
-}
-
-.gallery {
-  width: 100%;
-  max-width: 70rem;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.composite {
-  margin-top: 8rem;
-}
-
-.gallerySm {
-  display: grid;
-  grid-template-columns: 1fr; /* Stack images vertically by default */
-  gap: 1.5rem; /* Space between items */
-}
-
-.galleryItem {
-  border-radius: 2rem;
-  overflow: hidden;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.galleryImage {
-  width: 100%;
-  height: 14rem;
-  object-fit: cover;
-  border-radius: 2rem;
-  transition: transform 0.3s;
-}
-
-.challengeSolution {
-  width: 100%;
-  max-width: 70rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  margin-top: 8rem;
-}
-
-.challengeSolutionLg {
-  flex-direction: column;
-}
-
-.challengeSolutionItem {
-  flex: 1;
 }
 
 /* Responsive Styles */
@@ -148,29 +83,7 @@
   .textContainer {
     height: 39rem;
   }
-
-  .paragraph {
-    line-height: 2.5rem;
-    margin-bottom: 4rem;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .challengeSolutionLg {
-    flex-direction: row;
-    align-items: flex-start;
-  }
 }
 
-@media (min-width: 1024px) {
-  .title {
-    font-size: 2rem;
-  }
 
-  .paragraph {
-    font-size: 1.25rem;
-  }
-}
 
