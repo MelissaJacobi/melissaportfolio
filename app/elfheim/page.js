@@ -26,8 +26,8 @@ export default function Elfheim({ params }) {
           />
         </div>
         <div className={styles.textContainer}>
-          <h2 className={`${styles.title} ${styles.titleLg} ${styles.overview}`}>Overview</h2>
-          <p className={`${styles.paragraph} ${styles.paragraphLg}`}>
+          <h2 className={`${styles.title} ${styles.overview}`}>Overview</h2>
+          <p className={`${styles.paragraph}`}>
             The aim of this project was to create a poster that advertised Elfheim
             as a great place to spend your next vacation.
             Elfheim is a mythical place from Nordic mythology where they believed elves lived.
@@ -40,7 +40,7 @@ export default function Elfheim({ params }) {
 
       <div className={styles.container}>
         <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Mockups</h2>
-        <div className={`${styles.gallery} ${styles.gallerySm}`}></div>
+        <div className={`${styles.gallery}`}></div>
         <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>
           <img
@@ -53,7 +53,7 @@ export default function Elfheim({ params }) {
           <img
               src="/elfheim-mockup-2.jpg"
               alt="Elfheim"
-              className={styles.mockupImage}
+              className={`${styles.mockupImage} ${styles.shortMockup}`}
             />
         </div>
         </div>
@@ -63,6 +63,9 @@ export default function Elfheim({ params }) {
       
       <div className={styles.container}>
       <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Composited Images</h2>
+      <p className={`${styles.paragraph}`}>
+            Here are some of the images used to create this poster!
+          </p>
         <div className={`${styles.gallery} ${styles.gallerySm}`}>
             {galleryImages.map((image, index) => (
             <div key={index} className={styles.galleryItem}>

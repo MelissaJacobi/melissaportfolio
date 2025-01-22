@@ -33,14 +33,16 @@
   }
 
   .mockupImage {
-    
     width: 100%;
-    height: 40rem;
     margin: auto;
     max-width: 40rem;
     object-fit: cover;
     border-radius: 4.5rem;
     transition: transform 0.3s;
+  }
+
+  .shortMockup {
+    height: 40rem;
   }
  
   .textContainer {
@@ -54,12 +56,9 @@
   .title {
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
- 
-  .titleLg {
     font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
   }
 
 
@@ -76,16 +75,12 @@
     margin-bottom: 2rem;
   }
  
-  .paragraphLg {
-    font-size: 1.25rem;
-  }
- 
   .gallery {
     width: 100%;
     max-width: 70rem;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
   
   .composite {
