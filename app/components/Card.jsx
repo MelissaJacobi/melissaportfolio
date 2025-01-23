@@ -16,10 +16,10 @@ export default function Card({ imgUrl, projectName, softwares }) {
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-70 rounded-[4.5rem] opacity-0 group-hover:opacity-100 duration-300 flex flex-col justify-center items-center text-center p-4">
-          <h2 className="font-quicksand text-xl font-bold text-white">
+          <h2 className="font-quicksand text-3xl font-bold text-white">
             {projectName}
           </h2>
-          <h3 className="mt-2 text-white font-semibold">Softwares Used:</h3>
+          <h3 className="mt-2 text-white font-semibold">Software Used:</h3>
           <ul className="mt-1 text-gray-200 list-none ">
             {softwares.map((software, index) => (
               <li key={index}>{software}</li>

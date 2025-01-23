@@ -27,7 +27,7 @@ const Navbar = () => {
     <>
       {/* Navigation Bar */}
       <nav
-        className="sticky top-0 z-10 flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] bg-black transition-colors duration-300 opacity-75"
+        className="sticky top-0 z-10 flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] bg-black/75 transition-colors duration-300 backdrop-blur-sm"
         style={{ height: "4rem" }}
       >
         {/* Links visible on large screens */}
@@ -36,22 +36,10 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/about">About</Link>
-          </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/contact">Contact</Link>
-          </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
             <Link href="/graphics">Graphics</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
             <Link href="/print">Print</Link>
-          </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/branding">Branding</Link>
-          </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/video">Video</Link>
           </button>
         </div>
       </nav>
