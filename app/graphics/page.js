@@ -5,11 +5,6 @@ import Card from "../components/Card";
 export default function Graphics() {
   const projects = [
     {
-      imgUrl: "/dellamatritch-low.jpg",
-      projectName: "Dellamatritch",
-      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
-    },
-    {
       imgUrl: "/elfheim.jpg",
       projectName: "Elfheim",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],

@@ -1,38 +1,60 @@
 "use client"; // This marks the file as a Client Component
 
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 
 export default function Header() {
   const pathname = usePathname();
   const [scrollY, setScrollY] = useState(0);
+  const [screenSize, setScreenSize] = useState("desktop"); // Tracks the current screen size
 
   // Handle scroll event to update scroll position
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Determine the header text based on the pathname
-  const headerText =
-    pathname === '/'
-      ? "Hi! I'm Melissa Jacobi"
-      : pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2);
+  // Update screen size based on window width
+  useEffect(() => {
+    const updateScreenSize = () => {
+      if (window.innerWidth <= 768) {
+        setScreenSize("mobile");
+      } else if (window.innerWidth <= 1024) {
+        setScreenSize("tablet");
+      } else {
+        setScreenSize("desktop");
+      }
+    };
 
-  // Enhanced parallax styles with greater separation between layers
+    updateScreenSize(); // Set the initial value
+    window.addEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
+
+  // Adjust parallax values based on screen size
+  const parallaxPixelAdjustments = {
+    desktop: [-50, -50, -50, 1800],
+    tablet: [-200, -200, -200, 1000],
+    mobile: [-150, -150, -150, 500],
+  };
+
   const parallaxStyles = [
+    { transform: `translateY(calc(${-scrollY * 0.05}px + ${parallaxPixelAdjustments[screenSize][0]}px))` },
+    { transform: `translateY(calc(${-scrollY * 0.15}px + ${parallaxPixelAdjustments[screenSize][1]}px))` },
+    { transform: `translateY(calc(${-scrollY * 0.3}px + ${parallaxPixelAdjustments[screenSize][2]}px))` },
+    { transform: `translateY(calc(${-scrollY * 0.5}px + ${parallaxPixelAdjustments[screenSize][3]}px))` },
+  ];
 
-    { transform: `translateY(calc(${-scrollY * 0.05}px + 50px))` }, // 1.svg (farthest)
-    { transform: `translateY(calc(${-scrollY * 0.15}px + 150px))` }, // 2.svg
-    { transform: `translateY(calc(${-scrollY * 0.3}px + 350px))` }, // 3.svg
-    { transform: `translateY(calc(${-scrollY * 0.5}px + 600px))` }, // 4.svg (closest)
-];
+  // Only render the header on the home page
+  if (pathname !== "/") {
+    return null;
+  }
 
   return (
     <header>
-      <div className="relative w-full h-screen overflow-hidden bg-white">
+      <div className="relative w-full h-[calc(100vh-5rem)] overflow-hidden bg-white">
         {/* Parallax Images */}
         {[1, 2, 3, 4].map((num, index) => (
           <img
@@ -43,21 +65,23 @@ export default function Header() {
             style={{
               ...parallaxStyles[index],
               bottom: 0, // Position at the bottom of the container
-              left: 0,   // Position at the left of the container
+              left: 0, // Position at the left of the container
             }}
           />
         ))}
 
         {/* Header Text */}
-        <div className="absolute top-0 left-0 w-full h-full flex items-start justify-center pt-[8rem]">
-          <h1 className="font-quicksand text-[5rem] font-bold text-black text-center px-4">
-            {headerText}
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <h1 className="font-quicksand text-[4rem] font-bold text-black text-center px-4 relative inline-block bg-white/50 p-2 rounded-lg shadow-[0_0_20px_10px_rgba(255,255,255,0.5)] backdrop-blur-sm">
+            Hi! I'm Melissa Jacobi
           </h1>
         </div>
 
         {/* Scroll Down Indicator */}
         <div className="absolute bottom-8 left-0 w-full flex justify-center">
-          <FaChevronDown className="text-white text-3xl animate-bounce" />
+          <div className="bg-white/50 p-2 rounded-lg shadow-[0_0_20px_10px_rgba(255,255,255,0.5)] backdrop-blur-sm w-20 h-20 rounded-[3rem] flex justify-center pt-6">
+            <FaChevronDown className="text-black text-[3rem] animate-bounce" />
+          </div>
         </div>
       </div>
     </header>

@@ -1,8 +1,8 @@
 "use client";
-import styles from "./elfheim.module.css";
+import styles from "./gatsby.module.css";
 
 
-export default function Elfheim({ params }) {
+export default function Gatsby({ params }) {
   const { projectName } = params;
 
 
@@ -20,23 +20,31 @@ export default function Elfheim({ params }) {
       <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>
           <img
-            src="/elfheimhigh.jpg"
+            src="/gatsby-glamour-sm.jpg"
             alt="Elfheim"
             className={styles.mainImage}
           />
         </div>
-        <div className={styles.textContainer}>
-          <h2 className={`${styles.title} ${styles.overview}`}>Overview</h2>
-          <p className={`${styles.paragraph}`}>
-            The aim of this project was to create a poster that advertised Elfheim
-            as a great place to spend your next vacation.
-            Elfheim is a mythical place from Nordic mythology where they believed elves lived.
-            To capture this otherworldly flavor, the poster features a grand statue, lush forests,
-            and a glowing sunset. To ensure that the image is cohesive, all shadows are
-            consistent with the position of the sun, and all assets have a slight golden hue.
-          </p>
+        <div className={`${styles.textContainer}${styles.textContainer}`}>
+            <img
+                src="/gatsby-glamour-lg.jpg"
+                alt="Elfheim"
+                className={styles.mainImage}
+            />
         </div>
       </div>
+    <div>
+        <h2 className={`${styles.title} ${styles.overview}`}>Overview</h2>
+        <p className={`${styles.paragraph}`}>
+        Gatsby Glamour is an 1920's fashion exibit at the National Canandian Museum of History. The goal of this project was to advertise
+        the exibit with two posters. one banner poster and one digital. The design goal of this project was to showcase
+        the range of the exhibit by combining black and 
+        white photography with the art deco style that was popular at that time. The chosen fonts also fit with the art deco style.
+        the layout also draws inspiration from many 1920's posters which featured a large image in the center with a 
+        border.
+        </p>
+
+    </div>
 
       <div className={styles.container}>
         <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Mockups</h2>

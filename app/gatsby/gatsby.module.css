@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 4rem;
   }
  
   .mainSection {
@@ -62,6 +61,10 @@
     margin-top: 3rem;
   }
 
+  .overview {
+    margin-top: 8rem;
+  }
+
 
   @media (max-width: 600px) {
     .overview {
@@ -73,7 +76,7 @@
     font-family: "Quicksand", sans-serif;
     font-size: 1.125rem;
     line-height: 2rem;
-    margin-bottom: 2rem;
+    max-width: 70rem;
   }
  
   .gallery {
@@ -105,7 +108,6 @@
     border-radius: 2rem;
     transition: transform 0.3s;
   }
-
  
   /* Responsive Styles */
   @media (min-width: 768px) {
