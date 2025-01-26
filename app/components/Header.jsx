@@ -35,7 +35,7 @@ export default function Header() {
 
   // Adjust parallax values based on screen size
   const parallaxPixelAdjustments = {
-    desktop: [-50, -50, -50, 1800],
+    desktop: [-50, -50, -50, 1700],
     tablet: [-200, -200, -200, 1000],
     mobile: [-150, -150, -150, 500],
   };
@@ -43,8 +43,8 @@ export default function Header() {
   const parallaxStyles = [
     { transform: `translateY(calc(${-scrollY * 0.05}px + ${parallaxPixelAdjustments[screenSize][0]}px))` },
     { transform: `translateY(calc(${-scrollY * 0.15}px + ${parallaxPixelAdjustments[screenSize][1]}px))` },
-    { transform: `translateY(calc(${-scrollY * 0.3}px + ${parallaxPixelAdjustments[screenSize][2]}px))` },
-    { transform: `translateY(calc(${-scrollY * 0.5}px + ${parallaxPixelAdjustments[screenSize][3]}px))` },
+    { transform: `translateY(calc(${-scrollY * 0.2}px + ${parallaxPixelAdjustments[screenSize][2]}px))` },
+    { transform: `translateY(calc(${-scrollY * 0.3}px + ${parallaxPixelAdjustments[screenSize][3]}px))` },
   ];
 
   // Only render the header on the home page
@@ -72,14 +72,14 @@ export default function Header() {
 
         {/* Header Text */}
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <h1 className="font-quicksand text-[4rem] font-bold text-black text-center px-4 relative inline-block bg-white/50 p-2 rounded-lg shadow-[0_0_20px_10px_rgba(255,255,255,0.5)] backdrop-blur-sm">
+          <h1 className="font-quicksand lg:text-[4rem] sm:text-xl md:text-[3rem] font-bold text-black text-center p-8 bg-white/50 rounded-lg backdrop-blur-sm">
             Hi! I'm Melissa Jacobi
           </h1>
         </div>
 
         {/* Scroll Down Indicator */}
         <div className="absolute bottom-8 left-0 w-full flex justify-center">
-          <div className="bg-white/50 p-2 rounded-lg shadow-[0_0_20px_10px_rgba(255,255,255,0.5)] backdrop-blur-sm w-20 h-20 rounded-[3rem] flex justify-center pt-6">
+          <div className="bg-white/50 p-2  backdrop-blur-sm w-20 h-20 rounded-[3rem] flex justify-center pt-6">
             <FaChevronDown className="text-black text-[3rem] animate-bounce" />
           </div>
         </div>
