@@ -47,45 +47,22 @@ export default function Gatsby({ params }) {
     </div>
 
       <div className={styles.container}>
-        <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Mockups</h2>
-        <div className={`${styles.gallery}`}></div>
         <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>
           <img
-            src="/elfheim-mockup.jpg"
+            src="/gatsby-mockup.jpg"
             alt="Elfheim"
             className={styles.mockupImage}
           />
         </div>
         <div className={styles.textContainer}>
           <img
-              src="/elfheim-mockup-2.jpg"
+              src="/gatsby-mockup-sm.jpg"
               alt="Elfheim"
               className={`${styles.mockupImage} ${styles.shortMockup}`}
             />
         </div>
         </div>
-      </div>
-
-      {/* Gallery */}
-      
-      <div className={styles.container}>
-      <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Composited Images</h2>
-      <p className={`${styles.paragraph}`}>
-            Here are some of the images used to create this poster!
-          </p>
-        <div className={`${styles.gallery} ${styles.gallerySm}`}>
-            {galleryImages.map((image, index) => (
-            <div key={index} className={styles.galleryItem}>
-                <img
-                src={image}
-                alt={`Elfheim gallery ${index + 1}`}
-                className={styles.galleryImage}
-                />
-            </div>
-            ))}
-        </div>
-      
       </div>    
     </div>
   );

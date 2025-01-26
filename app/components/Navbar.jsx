@@ -32,14 +32,20 @@ const Navbar = () => {
       >
         {/* Links visible on large screens */}
         <div className="hidden lg:flex space-x-4">
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/">Home</Link>
           </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/graphics">Graphics</Link>
           </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-xl duration-300 hover:translate-y-1 opacity-100">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/print">Print</Link>
+          </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+            <Link href="/wireframes">Wireframes</Link>
+          </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+            <Link href="/contact">Contact</Link>
           </button>
         </div>
       </nav>
@@ -47,9 +53,9 @@ const Navbar = () => {
       {/* Logo */}
       <div className="fixed top-0 left-0 p-4 z-30">
         <img
-          src={isScrolled ? "/logo.png" : "/logoblack.svg"}
+          src="/logo.png"
           alt="Logo"
-          className="w-24 h-auto transition-all duration-300"
+          className="w-[7rem] h-auto transition-all duration-300"
         />
       </div>
 
@@ -59,19 +65,14 @@ const Navbar = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div
-          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 ${
-            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-black"
-          } ${isOpen ? "rotate-45 translate-y-2" : "hover:translate-x-1"}`}
+          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-[rgb(255,164,0)] ${isOpen ? "rotate-45 translate-y-2" : "hover:translate-x-1"}`}
         ></div>
         <div
-          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 ${
-            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-black"
-          } ${isOpen ? "opacity-0" : "hover:scale-125"}`}
+          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-[rgb(255,164,0)] ${isOpen ? "opacity-0" : "hover:scale-125"}`}
         ></div>
         <div
-          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 ${
-            isScrolled ? "bg-[rgb(255,164,0)]" : "bg-black"
-          } ${isOpen ? "-rotate-45 -translate-y-2" : "hover:translate-x-1"}`}
+          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-[rgb(255,164,0)]
+          ${isOpen ? "-rotate-45 -translate-y-2" : "hover:translate-x-1"}`}
         ></div>
       </div>
 
