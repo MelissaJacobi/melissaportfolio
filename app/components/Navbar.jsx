@@ -36,16 +36,16 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/print">Print</Link>
+            <Link href="/design">Design</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/wireframes">Wireframes</Link>
+            <Link href="/uiux">UI/UX</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/contact">Contact</Link>
           </button>
         </div>
-      </nav>
+      </nav>  
 
       {/* Logo */}
       <div className="fixed top-0 left-0 p-4 z-30">

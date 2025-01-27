@@ -2,7 +2,7 @@
 import Card from "../components/Card";
 
 
-export default function Wireframes() {
+export default function uiux() {
   const projects = [
     {
       imgUrl: "/hivefive.jpg",

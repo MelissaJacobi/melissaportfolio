@@ -24,9 +24,10 @@ export default function Elfheim({ params }) {
       <div className={styles.textContainer}>
           <h2 className={`${styles.title}`}>Overview</h2>
           <p className={`${styles.paragraph} `}>
-          Driftstone is a small craft brewery based in British Columbia, inspired by the province’s rugged landscapes and adventurous spirit
-          This project focused on creating can designs for three distinct Driftstone Ale flavors: Wheat Ale, Pale Ale, and Amber Ale. The challenge was to ensure each can had its own identity while maintaining a cohesive brand image.
-          To achieve this balance, the designs shared a color palette, but  featured different central images: a bridge, a plane, and a boat.
+            Driftstone is a small craft brewery based in British Columbia, inspired by the province’s rugged landscapes and adventurous spirit.  
+            This project focused on creating can designs for three distinct Driftstone Ale flavors: Wheat Ale, Pale Ale, and Amber Ale. The challenge was to ensure that each can had its own unique identity while maintaining a cohesive brand image.  
+            To achieve this balance, the designs shared a consistent color palette but featured different central images: a bridge, a plane, and a boat. These images were chosen to reflect the brand's deep connection to the British Columbian outdoors.
+            The colors further reinforced this message by incorporating the oranges and blues found in British Columbia’s sunsets.  
           </p>
         </div>
 

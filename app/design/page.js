@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 
 
-export default function Graphics() {
+export default function Design() {
   const projects = [
     {
       imgUrl: "/can-mockup.jpg",
@@ -11,12 +11,12 @@ export default function Graphics() {
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
-      imgUrl: "/gatsby-glamour.jpg",
+      imgUrl: "/gatsby-mockup-sm.jpg",
       projectName: "Gatsby",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
-      imgUrl: "/elfheim.jpg",
+      imgUrl: "/elfheim-mockup-2.jpg",
       projectName: "Elfheim",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },

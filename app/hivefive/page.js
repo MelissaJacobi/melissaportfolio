@@ -30,7 +30,7 @@ export default function hivefive({ params }) {
         <p className={`${styles.paragraph} `}>
         The Hivefive app is designed to promote awareness and support for bee conservation through engaging and accessible 
         features. Users can take quizzes to earn points that convert to donations for the cause, read educational articles
-        about bees, and enjoy interactive matching games. Accessibility was a key challenge, which we resolved by implementing features like text-to-sound and 
+        about bees, and enjoy interactive matching games. Accessibility was a key challenge, which was resolved by implementing features like text-to-sound and 
         voice-to-text in the quiz section, high-contrast color schemes, legible fonts, and settings for dark mode and adjustable text size. 
         Hivefive combines education, entertainment, and impact, making it easy for everyone to contribute to saving the bees.
         </p>
