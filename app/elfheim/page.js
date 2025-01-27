@@ -38,8 +38,8 @@ export default function Elfheim({ params }) {
         </div>
       </div>
 
-      <div className={styles.container}>
-        <h2 className={`${styles.title} ${styles.titleLg} ${styles.composite}`}>Mockups</h2>
+      <div className={styles.textContainer}>
+        <h2 className={`${styles.title} ${styles.composite}`}>Mockups</h2>
         <div className={`${styles.gallery}`}></div>
         <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>

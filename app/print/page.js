@@ -15,6 +15,11 @@ export default function Graphics() {
       projectName: "Gatsby",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
+    {
+      imgUrl: "/elfheim.jpg",
+      projectName: "Elfheim",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
+    },
   ];
 
 

@@ -30,9 +30,8 @@ export default function Elfheim({ params }) {
           </p>
         </div>
 
-      <div className={styles.container}>
-        <h2 className={`${styles.title}`}>Variations</h2>
-        <div className={`${styles.gallery} ${styles.gallerySm}`}></div>
+      <div className={styles.textContainer}>
+        <h2 className={`${styles.variations}`}>Variations</h2>
         <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>
           <img
@@ -58,9 +57,7 @@ export default function Elfheim({ params }) {
         </div>
       </div>   
 
-    </div>
-    <Footer />
-    
+    </div>    
     </>
   );
 }

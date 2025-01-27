@@ -36,9 +36,6 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/graphics">Graphics</Link>
-          </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/print">Print</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
