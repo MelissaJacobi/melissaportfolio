@@ -10,29 +10,7 @@ export default function Elfheim({ params }) {
     <>
     <div className={styles.container}>
       {/* Main Section */}
-      <div className={`${styles.mainSection}`}>
-        <div className={styles.mainImageContainer}>
-          <img
-            src="/driftstone-hero-01.jpg"
-            alt="Elfheim"
-            className={styles.mainImage}
-          />
-        </div>
-        
-      </div>
-
       <div className={styles.textContainer}>
-          <h2 className={`${styles.title}`}>Overview</h2>
-          <p className={`${styles.paragraph} `}>
-            Driftstone is a small craft brewery based in British Columbia, inspired by the province’s rugged landscapes and adventurous spirit.  
-            This project focused on creating can designs for three distinct Driftstone Ale flavors: Wheat Ale, Pale Ale, and Amber Ale. The challenge was to ensure that each can had its own unique identity while maintaining a cohesive brand image.  
-            To achieve this balance, the designs shared a consistent color palette but featured different central images: a bridge, a plane, and a boat. These images were chosen to reflect the brand's deep connection to the British Columbian outdoors.
-            The colors further reinforced this message by incorporating the oranges and blues found in British Columbia’s sunsets.  
-          </p>
-        </div>
-
-      <div className={styles.textContainer}>
-        <h2 className={`${styles.variations}`}>Variations</h2>
         <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>
           <img
@@ -57,6 +35,41 @@ export default function Elfheim({ params }) {
         </div>
         </div>
       </div>   
+
+      <div className={styles.textContainer}>
+          <h2 className={`${styles.title}`}>Overview</h2>
+          <p className={`${styles.paragraph} `}>
+            Driftstone is a small craft brewery based in British Columbia, inspired by the province’s rugged landscapes and adventurous spirit.  
+            This project focused on creating can designs for three distinct Driftstone Ale flavors: Wheat Ale, Pale Ale, and Amber Ale. The challenge was to ensure that each can had its own unique identity while maintaining a cohesive brand image.  
+            To achieve this balance, the designs shared a consistent color palette but featured different central images: a bridge, a plane, and a boat. These images were chosen to reflect the brand's deep connection to the British Columbian outdoors.
+            The colors further reinforced this message by incorporating the oranges and blues found in British Columbia’s sunsets.  
+          </p>
+        </div>
+
+      <div className={`${styles.dielineSection}`}>
+        <h2 className={`${styles.variations}`}>Dielines</h2>
+        <div className={styles.mainImageContainer}>
+          <img
+            src="/driftstone-hero-01.jpg"
+            alt="Elfheim"
+            className={styles.mainImage}
+          />
+        </div>
+        <div className={styles.mainImageContainer}>
+          <img
+            src="/driftstone-dieline-plane.jpg"
+            alt="Elfheim"
+            className={styles.mainImage}
+          />
+        </div>
+        <div className={styles.mainImageContainer}>
+          <img
+            src="/driftstone-dieline-boat.jpg"
+            alt="Elfheim"
+            className={styles.mainImage}
+          />
+        </div>
+      </div>
 
     </div>    
     </>

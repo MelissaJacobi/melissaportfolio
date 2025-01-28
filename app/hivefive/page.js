@@ -96,7 +96,12 @@ export default function hivefive({ params }) {
         </div>
       </div>   
         <div classnmame={styles.mainSection}>
-            <button className="z-10 w-[10rem] bg-white text-black py-2 rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition m-3 mt-[8rem]">Try it out!</button>
+        <button
+          className="z-10 w-[10rem] bg-white text-black py-2 rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition m-3 mt-[8rem]"
+          onClick={() => window.open("https://hivefive-bee.vercel.app/Home", "_blank")}
+        >
+          Try it out!
+        </button>
             <button className="z-10 w-[10rem] bg-white text-black py-2 rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition m-3 mt-[8rem]">Github link</button>
         </div>
     </div>

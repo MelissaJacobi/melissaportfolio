@@ -19,6 +19,11 @@
   gap: 2.5rem;
 }
 
+.dielineSection {
+  width: 100%;
+  max-width: 70rem;
+}
+
 .mainImageContainer {
   flex: 1;
   display: flex;
@@ -29,9 +34,9 @@
   width: 100%;
   object-fit: cover;
   border-radius: 1rem;
-  margin-top: 6rem;
   transition: transform 0.3s;
   margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 .mockupImage {
