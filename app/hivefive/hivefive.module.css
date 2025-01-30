@@ -16,7 +16,6 @@
     max-width: 70rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
   }
   
   .mainImageContainer {
@@ -35,14 +34,13 @@
     width: 100%;
     object-fit: cover;
     border-radius: 1rem;
-    margin-top: 6rem;
     transition: transform 0.3s;
     margin-bottom: 2rem;
   }
   
   .mockupImage {
     height: 10rem;
-    margin: auto;
+    margin: 2rem;
     max-width: 40rem;
     object-fit: cover;
     animation: moveUpDown 2s ease-in-out infinite;
@@ -75,6 +73,11 @@
     font-size: 2rem;
     margin-bottom: 3rem;
     margin-top: 4rem;
+  }
+
+  .overviewBtn {
+    display: flex;
+    gap: 1rem;
   }
   
   .overview {

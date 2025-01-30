@@ -43,7 +43,7 @@ export default function Contact() {
     <>
       <div className="h-[calc(100vh-5rem)] flex justify-center items-center bg-black text-white relative overflow-y-hidden">
         <main className="flex-grow max-w-[40rem] p-4 relative z-10">
-          <h1 className="text-[2rem] font-bold text-center mb-6 font-quicksand">Let's Connect!</h1>
+          <h1 className="text-[3rem] font-bold text-center mb-[5rem] font-mitr">Let's Connect!</h1>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <input
@@ -84,7 +84,7 @@ export default function Contact() {
         <img
           src="/contact-me.svg"
           alt="contact me photo"
-          className="absolute w-full h-full object-cover"
+          className="absolute w-full h-full object-cover hidden md:block"
         />
       </div>
     </>
