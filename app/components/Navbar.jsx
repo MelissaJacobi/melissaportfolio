@@ -80,27 +80,18 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex flex-col justify-start items-center p-4 bg-[#161616] w-[15rem] h-screen rounded-l-[4rem] shadow-lg space-y-4">
+          <div className="flex flex-col justify-start items-center p-4 bg-black/75 backdrop-blur-[0.2rem] w-[15rem] h-screen rounded-l-[4rem] shadow-lg space-y-4">
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/">Home</Link>
-            </button>
-            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/about">About</Link>
             </button>
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/contact">Contact</Link>
             </button>
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/graphics">Graphics</Link>
+              <Link href="/design">Design</Link>
             </button>
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/print">Print</Link>
-            </button>
-            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/branding">Branding</Link>
-            </button>
-            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/video">Video</Link>
+              <Link href="/uiux">UI/UX</Link>
             </button>
           </div>
         </div>
