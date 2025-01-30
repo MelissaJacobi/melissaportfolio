@@ -32,12 +32,12 @@ export default function Header() {
   }, []);
 
   const parallaxPixelAdjustments = {
-    desktop: [-50, -50, -50, -10, 100], 
-    tablet: [-20, -20, -50, 20, 100],
-    mobile: [-70, -70, -80, 20, 100],
+    desktop: [-50, -50, -50, -10], 
+    tablet: [-20, -20, -50, 20],
+    mobile: [-70, -70, -80, 20],
   };
 
-  const parallaxSpeeds = [0.05, 0.15, 0.2, 0.3, 0.35];
+  const parallaxSpeeds = [0.05, 0.15, 0.2, 0.3];
 
   if (pathname !== "/") {
     return null;
@@ -46,13 +46,13 @@ export default function Header() {
   return (
     <header>
       <div className="relative w-full h-[calc(100vh-5rem)] overflow-hidden bg-white">
-        {/* Parallax Images */}
-        {[1, 2, 3, 4, 5].map((num, index) => (
+        {/* Parallax Images (1-4) */}
+        {[1, 2, 3, 4].map((num, index) => (
           <img
             key={num}
             src={`/${num}.svg`}
             alt={`Parallax Layer ${num}`}
-            className={`absolute w-[110%]`}
+            className="absolute w-[110%]"
             style={{
               transform: `translateY(calc(${-scrollY * parallaxSpeeds[index]}px + ${parallaxPixelAdjustments[screenSize][index]}px))`,
               bottom: 0,
@@ -61,11 +61,24 @@ export default function Header() {
           />
         ))}
 
-        {/* Header Text */}
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <h1 className="font-Mitr text-[4rem] w-full text-center font-bold text-white p-2 bg-black/40 backdrop-blur-[0.2rem] translate-y-10">
+        {/* Header Text & Foreground Image */}
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center relative">
+          {/* Header Text */}
+          <h1 className="font-Mitr text-[4rem] w-full text-center font-bold text-white p-2 bg-black/40 backdrop-blur-[0.2rem] translate-y-10 relative z-10">
             MELISSA JACOBI
           </h1>
+
+          {/* 5.svg - Foreground Layer (Above H1) */}
+          <img
+            src="/5.svg"
+            alt="Parallax Layer 5"
+            className="absolute w-[110%] z-20"
+            style={{
+              transform: `translateY(calc(${-scrollY * 0.4}px + 100px))`,
+              bottom: 0,
+              left: 0,
+            }}
+          />
         </div>
       </div>
     </header>

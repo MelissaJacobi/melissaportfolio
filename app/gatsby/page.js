@@ -5,15 +5,6 @@ import styles from "./gatsby.module.css";
 export default function Gatsby({ params }) {
   const { projectName } = params;
 
-
-  const galleryImages = [
-    "/trees.jpeg",
-    "/stream.jpg",
-    "/statue.webp",
-    "/peaks.jpg",
-  ];
-
-
   return (
     <div className={styles.container}>
       {/* Main Section */}
@@ -36,12 +27,11 @@ export default function Gatsby({ params }) {
     <div>
         <h2 className={`${styles.title} ${styles.overview}`}>Overview</h2>
         <p className={`${styles.paragraph}`}>
-        Gatsby Glamour is an 1920's fashion exibit at the National Canandian Museum of History. The goal of this project was to advertise
-        the exibit with two posters. one banner poster and one digital. The design goal of this project was to showcase
-        the range of the exhibit by combining black and 
-        white photography with the art deco style that was popular at that time. The chosen fonts also fit with the art deco style.
-        the layout also draws inspiration from many 1920's posters which featured a large image in the center with a 
-        border.
+        Gatsby Glamour is a 1920s fashion exhibit at the National Canadian Museum of History. 
+        The goal of this project was to advertise the exhibit with two posters: one banner poster and one digital. 
+        The design objective was to showcase the range of the exhibit by combining black-and-white photography with 
+        the Art Deco style that was popular at the time. The chosen fonts also reflect the Art Deco aesthetic. 
+        The layout draws inspiration from many 1920s posters, which often featured a large central image with a border.
         </p>
 
     </div>

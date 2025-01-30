@@ -25,7 +25,15 @@ export default function hivefive({ params }) {
         </div>
 
       <div className={styles.textContainer}>
-          <h2 className={`${styles.title}`}>Overview</h2>
+        <div className={styles.overviewBtn}>
+          <h2 className={styles.title}>Overview</h2>
+          <button
+            className="z-10 w-[7rem] mt-[4.25rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
+            onClick={() => window.open("https://hivefive-bee.vercel.app/Home", "_blank")}
+          >
+            Try it out!
+          </button>
+        </div>
           <p className={`${styles.paragraph} `}>
           The Hivefive app is designed to promote awareness and support for bee conservation through engaging and accessible 
           features. Users can take quizzes to earn points that convert to donations for the cause, read educational articles
@@ -37,8 +45,8 @@ export default function hivefive({ params }) {
 
       <div className={`${styles.mainSection}`}>
           
-        <div className={styles.mainImageContainer}>
-              
+        <h2 className={`${styles.title}`}>Wireframes</h2>
+        <div className={styles.mainImageContainer}>         
           <video 
               className={styles.mainImage} 
               autoPlay 
@@ -95,13 +103,8 @@ export default function hivefive({ params }) {
           </div>
         </div>   
         <div classnmame={styles.mainSection}>
-        <button
-          className="z-10 w-[10rem] bg-white text-black py-2 rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition m-3 mt-[8rem]"
-          onClick={() => window.open("https://hivefive-bee.vercel.app/Home", "_blank")}
-        >
-          Try it out!
-        </button>
-            <button className="z-10 w-[10rem] bg-white text-black py-2 rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition m-3 mt-[8rem]">Github link</button>
+        
+            
         </div>
     </div>
   );

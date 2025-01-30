@@ -97,6 +97,9 @@ const Navbar = () => {
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/uiux">UI/UX</Link>
             </button>
+            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
+              <Link href="/video">Video</Link>
+            </button>
           </div>
         </div>
       )}
