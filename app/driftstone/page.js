@@ -1,6 +1,6 @@
 "use client";
 import styles from "./driftstone.module.css";
-import Footer from "../components/Footer";
+import { gsap } from "gsap";
 
 
 export default function Elfheim({ params }) {
@@ -10,7 +10,7 @@ export default function Elfheim({ params }) {
     <>
     <div className={styles.container}>
       {/* Main Section */}
-      <div className={styles.textContainer}>
+      <div className={`${styles.textContainer} ${styles}`}>
         <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>
           <img
