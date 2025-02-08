@@ -58,7 +58,7 @@ export default function hivefive({ params }) {
           </video>
         </div>
           
-        </div>
+      </div>
 
         <div className={styles.container}>
           <h2 className={`${styles.title}`}>Colour Scheme</h2>

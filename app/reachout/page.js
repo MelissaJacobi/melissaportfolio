@@ -1,0 +1,298 @@
+"use client";
+import styles from "./reachout.module.css";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const timelineSteps = [
+  {
+    id: 1,
+    title: "Prisoner is released",
+    description:
+      "Since Canadian prisons do not allow any internet use, recently released prisoners feel overwhelmed searching for a new job, as they have not used the internet for the duration of their incarceration.",
+    image: "/overwhelmed.svg",
+  },
+  {
+    id: 2,
+    title: "Prisoners reach out to nonprofit organizations",
+    description:
+      "These organizations assist them in finding jobs and provide guidance on reintegration.",
+    image: "/help.svg",
+  },
+  {
+    id: 3,
+    title: "Organizations apply to employers on the individual's behalf",
+    description:
+      "Before ReachOut, Organizations would utilize mutliple tools to apply for jobs such as glassdoor and indeed. They would rely on excel to keep their clients organized.",
+    image: "/sent.svg",
+    badge: true,
+  },
+];
+
+const discoveryText = [
+  "1. There was no integrated system for these nonprofit organizations.",
+  "2. Employers were facing labour shortages.",
+  "3. Former prisoners possessed the skills, motivation, and dedication to exceed expectations.",
+];
+
+export default function Reachout({ params }) {
+  return (
+    <div className={styles.container}>
+      <div className="flex justify-center max-w-[70rem] bg-[#222A41] rounded-[1rem]">
+        <div className="flex justify-center">
+          <video className="w-full h-full rounded-[1rem] object-cover" autoPlay muted>
+            <source src="/mockup-hero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="w-[23rem]">
+          <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem]">ReachOut</h2>
+          <h2 className="font-quicksand text-[1.5rem] mr-[2rem]">Building Bridges to Employment</h2>
+          <p className="w-[18rem] font-quicksand leading-[2rem] mb-[15rem] mt-[1rem] mr-[4rem]">
+            ReachOut is a platform designed to bridge the gap between organizations helping ex-offenders and employers who are open to second-chance hiring.
+          </p>
+          <div className="flex justify-between">
+            <div className="w-[50%]">
+              <h2 className="font-mitr font-semibold text-[2rem] mt-10">My Role</h2>
+              <p className="w-[25rem] font-quicksand leading-[2rem] mb-[2rem]">Graphic Designer</p>
+            </div>
+            <div>
+              <img
+                src="/my-role.svg"
+                alt="Elfheim"
+                className="h-[10rem] object-cover rounded-[1rem]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full max-w-[70rem] mt-[8rem]">
+        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem]">Research</h2>
+        <p className="w-[40rem] font-quicksand leading-[2rem]">
+          To begin this project, the team researched what happens when someone is released from prison. Here's what was found...
+        </p>
+        <div className="relative mt-10">
+          {timelineSteps.map((step, index) => (
+            <motion.div
+              key={step.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="relative flex items-center mb-[7rem]"
+            >
+              <div className="w-[5rem] h-[5rem] bg-[#222A41] rounded-full flex items-center justify-center text-[2rem] text-white font-bold">
+                {step.id}
+              </div>
+              <div className="ml-6 bg-[#222A41] rounded-lg shadow-md w-[60rem] flex items-center">
+                <div className="ml-[2rem]">
+                  <h3 className="font-mitr text-2xl font-semibold">{step.title}</h3>
+                  <p className="font-quicksand leading-[1.75rem] mt-2">{step.description}</p>
+                  {step.badge && (
+                    <motion.span
+                      className="inline-block bg-[#995267] text-white font-semibold px-3 py-1 rounded-lg mt-3 font-quicksand"
+                      initial={{ scale: 0.85 }}
+                      animate={{ scale: 1 }}
+                      transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+                    >
+                      This is where ReachOut comes in!
+                    </motion.span>
+                  )}
+                </div>
+                <img src={step.image} alt={step.title} className="max-w-[28rem] mt-4 h-[25rem] object-cover rounded-lg mr-6" />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+          
+      {/* Our Discovery Section */}
+      <div className="w-full max-w-[70rem] border-[#222A41] border-[0.25rem] p-8 rounded-[1rem]">
+        <h2 className="font-mitr font-semibold text-[2rem] mb-[2rem]">Discoveries</h2>
+        <div className="mt-4 space-y-12">
+          {discoveryText.map((sentence, sentenceIndex) => (
+            <div key={sentenceIndex} className="text-2xl font-quicksand text-white">
+              {sentence.split(" ").map((word, wordIndex) => (
+                <motion.span
+                  key={wordIndex}
+                  className="inline-block mr-2"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: sentenceIndex * 1 + wordIndex * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full max-w-[70rem] mt-[8rem] bg-[#374869] rounded-[1rem]">
+        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Personas</h2>
+        <p className="w-[40rem] font-quicksand leading-[2rem] ml-8">
+         Based on these discoveries two distinct personas were created. One non-profit worker and one Employer interested in second chance hiring.
+        </p>
+        <div className="flex justify-between mt-8">
+          <div className="w-[45%] cursor-pointer bg-[#222A41] m-8 rounded-[1rem]">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex flex-col items-center"
+              onClick={() => window.open('/leena.pdf', '_blank')}
+            >
+              <img
+                src="/leena-vector.svg"
+                alt="Leena"
+                className="w-[15.5rem] h-[23.5rem] rounded-[1rem]"
+              />
+              <p className="mt-2 font-mitr text-xl font-semibold text-white">Leena</p>
+              <p className="font-quicksand text-xl text-white bg-[#222A41] rounded-[1rem] p-2">Non-profit Worker</p>
+            </motion.div>
+          </div>
+
+          <div className="w-[45%] cursor-pointer bg-[#222A41] m-8 rounded-[1rem]">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex flex-col items-center"
+              onClick={() => window.open('/ryan.pdf', '_blank')}
+            >
+              <img
+                src="/ryan-vector.svg"
+                alt="Ryan"
+                className="w-[15.5rem] h-[23.5rem] rounded-[1rem]"
+              />
+              <p className="mt-2 font-mitr text-xl font-semibold text-white">Ryan</p>
+              <p className="font-quicksand text-xl text-white bg-[#222A41] rounded-[1rem] p-2 px-3">Employer</p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Flows Section */}
+      <div className="w-full max-w-[70rem] mt-[8rem] border-[#222A41] border-solid border-[0.25rem] rounded-[1rem]">
+        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Flows</h2>
+        <p className="w-[40rem] font-quicksand leading-[2rem] ml-8">
+          This research also informed two distinct Flows. One for Non-profit workers, and one for Employers.
+        </p>
+        <div className="flex justify-between mt-8">
+          {/* Employer Flow */}
+          <div className="w-[45%] cursor-pointer bg-[#374869] m-8 rounded-[1rem] relative group">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex flex-col items-center relative overflow-hidden rounded-[1rem]"
+              onClick={() => window.open('/employer-flow.png', '_blank')}
+            >
+              <img
+                src="/employer-flow.png"
+                alt="Employer Flow"
+                className="w-[25rem] h-[23.5rem] rounded-[1rem] object-cover"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 flex-wrap flex justify-center content-center transition-opacity duration-300 rounded-[1rem]">
+                <p className="text-white text-xl font-mitr w-full text-center h-[3rem]">Organization Flow</p>
+                <p className="w-[15rem] text-center font-quicksand">The Organization flow allows non-profits to keep their clients organized, view job listings, and create new resumes for their clients.</p>
+                <p className="w-[20rem] mt-4 text-center font-quicksand text-gray-300">Click to see more!</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Organization Flow */}
+          <div className="w-[45%] cursor-pointer bg-[#374869] m-8 rounded-[1rem] relative group">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex flex-col items-center relative overflow-hidden rounded-[1rem]"
+              onClick={() => window.open('/organization-flow.png', '_blank')}
+            >
+              <img
+                src="/organization-flow.png"
+                alt="Organization Flow"
+                className="w-[25rem] h-[23.5rem] rounded-[1rem] object-cover"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 flex-wrap flex justify-center content-center transition-opacity duration-300 rounded-[1rem]">
+                <p className="text-white text-xl font-mitr w-full text-center h-[3rem]">Employer Flow</p>
+                <p className="w-[15rem] text-center font-quicksand">The Employer flow allows buisnesses to post job listings, keep track of their applicants and stay on top of interviews. </p>
+                <p className="w-[20rem] mt-4 text-center font-quicksand text-gray-300">Click to see more!</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full max-w-[70rem] h-[30rem] mt-[8rem] flex bg-[#222A41] rounded-[1rem]">
+        <div className="w-[35%]">
+            <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">AI Job Matching</h2>
+            <p className="w-[22rem] font-quicksand leading-[2rem] ml-8 mt-4">
+                The research showed that it was exhausting for organizations to have to filter through each job listing only to find one or two critera their client lacked.
+                With the help of AI and ReachOut, these non-profit workers can tell at a glance whether or not a job posting is right for their client.
+            </p>  
+        </div>
+        <div>
+            <img
+                src="/reachout-matching.png"
+                alt="ai job matching shows at a glance whether or not the job listings match the client"
+                className="h-[50rem] rounded-[1rem] translate-y-[-5rem]"
+            />
+        </div>
+      </div>
+
+      <div className="w-full max-w-[70rem] h-[30rem] mt-[8rem] flex border-[#222A41] border-solid border-[0.25rem]  rounded-[1rem]">
+        <div>
+            <img
+                src="/logo-breakdown.svg"
+                alt="ai job matching shows at a glance whether or not the job listings match the client"
+                className="h-[40rem] rounded-[1rem] translate-y-[-2.25rem]"
+            />
+        </div>
+        <div className="w-[50%]">
+            <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Logo and Branding</h2>
+            <ul className="font-quicksand leading-[2rem] ml-8 list-none">
+                <li className="mt-4">Our logo combines two main parts.</li>
+                <li className="mt-4 flex">
+                    <span className="mr-2">1.</span>
+                    The hands, which represent aid and assistance to symbolize ReachOut’s mission to assist formerly incarcerated individuals.
+                </li>
+                <li className="mt-2 flex">
+                    <span className="mr-2">2.</span>
+                    The second part is the bird found in the negative space. This bird represents the freedom these individuals find themselves with.
+                </li>
+                <li className="mt-4">Together these images create a picture of newfound freedom, being aided in that new freedom, and finding a path forward.</li>
+            </ul>
+        </div>
+      </div>
+
+      <div className="w-full max-w-[70rem] h-[30rem] mt-[8rem] flex bg-[#222A41] rounded-[1rem]">
+        <div className="w-[35%]">
+            <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Styleguide</h2>
+            <p className="w-[22rem] mt-4 font-quicksand leading-[2rem] ml-8">
+                The goal of the brand colours to be calming and trustworthy. The fonts were chosen to be legible, going with a sans serif to keep it
+                minimalist.
+            </p>  
+        </div>
+        <div>
+            <img
+                src="/style-tile.jpg"
+                alt="ai job matching shows at a glance whether or not the job listings match the client"
+                className="rounded-[1rem] translate-y-[2rem] translate-x-[3rem]"
+            />
+        </div>
+      </div>
+
+      <h2 className="font-mitr font-semibold text-[2rem] ml-8 mt-[8rem]">The Final Product</h2>
+        <p className="mt-4 font-quicksand leading-[2rem] ml-8">
+            After months of hard work, the app was finally released.
+        </p> 
+        <button
+            className="z-10 px-3 h-[3rem] mt-[2rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
+            onClick={() => window.open("https://wereachout.ca", "_blank")}
+            >
+            Take a look!
+        </button>
+    </div>
+  );
+}
