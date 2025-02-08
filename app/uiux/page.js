@@ -9,6 +9,11 @@ export default function uiux() {
       projectName: "Hivefive",
       softwares: [ "Adobe Illustrator", "javascript", "Next.js", "Figma", "HTML", "CSS"],
     },
+    {
+      imgUrl: "/reachout-cover.jpg",
+      projectName: "ReachOut",
+      softwares: ["Adobe After Effects", "Adobe Illustrator", "javascript", "ShadCN", "Figma", "HTML", "CSS", "Trello"],
+    },
   ];
 
 
