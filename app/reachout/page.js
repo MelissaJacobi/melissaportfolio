@@ -282,10 +282,10 @@ export default function Reachout({ params }) {
             />
         </div>
       </div>
-      <div>
+      <div className=" w-[70rem] content-center">
         <h2 className="font-mitr font-semibold text-[2rem] ml-8 mt-[8rem]">Challenges</h2>
         <ul className="font-quicksand leading-[2rem] ml-8 list-none">
-                <li className="mt-4">During this process the team encountered many challanges. the most notable ones being</li>
+                <li className="mt-4">During this process the team encountered many challenges. the most notable ones being</li>
                 <li className="mt-4 flex">
                     <span className="mr-2">1.</span>
                     Interviews. Finding willing participants to answer our surveys and sit down for interviews was very difficult.
