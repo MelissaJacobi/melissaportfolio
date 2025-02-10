@@ -282,6 +282,24 @@ export default function Reachout({ params }) {
             />
         </div>
       </div>
+      <div>
+        <h2 className="font-mitr font-semibold text-[2rem] ml-8 mt-[8rem]">Challenges</h2>
+        <ul className="font-quicksand leading-[2rem] ml-8 list-none">
+                <li className="mt-4">During this process the team encountered many challanges. the most notable ones being</li>
+                <li className="mt-4 flex">
+                    <span className="mr-2">1.</span>
+                    Interviews. Finding willing participants to answer our surveys and sit down for interviews was very difficult.
+                    To combat this the team used personal connections, and sent out many emails to gather enough data to make meaningfull 
+                    steps forward
+                </li>
+                <li className="mt-2 flex">
+                    <span className="mr-2">2.</span>
+                    Logo. Finding a way to incorperate the bird, hands, and a professional atmosphere into the logo while maintianing
+                    a cohesive image was difficult. To ensure the logo effectively 
+                    combined these aspects many drafts were sketched out and feedback was received at various points during the design process. 
+                </li>
+            </ul>
+      </div>
 
       <h2 className="font-mitr font-semibold text-[2rem] ml-8 mt-[8rem]">The Final Product</h2>
         <p className="mt-4 font-quicksand leading-[2rem] ml-8">
