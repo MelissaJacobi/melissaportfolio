@@ -31,8 +31,27 @@ const timelineSteps = [
 const discoveryText = [
   "1. There was no integrated system for these nonprofit organizations.",
   "2. Employers were facing labour shortages.",
-  "3. Former prisoners possessed the skills, motivation, and dedication to exceed expectations.",
+  "3. Former prisoners possess the skills, motivation, and dedication to exceed expectations.",
 ];
+
+const timelineStages = [
+  {
+    id: 1,
+    title: "Initial Design",
+    image: "/initial.png",
+  },
+  {
+    id: 2,
+    title: "Revision One",
+    image: "/revision.png",
+  },
+  {
+    id: 3,
+    title: "Final Design",
+    image: "/final.png",
+  },
+];
+
 
 export default function Reachout({ params }) {
   return (
@@ -66,8 +85,32 @@ export default function Reachout({ params }) {
         </div>
       </div>
 
+      <div className="w-full max-w-[70rem] mt-[8rem] border-[#222A41] border-solid border-[0.25rem] flex flex-col items-center">
+        <h2 className="font-mitr font-semibold text-[2rem] mt-[4rem]">The Final Product</h2>
+        <p className="mt-2 font-quicksand leading-[2rem] max-w-[50rem] text-center">
+        While the app is live, access is currently limited to verified non-profit organizations and businesses. 
+        In the meantime, please feel free to explore this high-fidelity prototype to get a detailed view of its features and design.
+        You can also check out the code on github!
+        </p> 
+        <div className="flex justify-center mb-[4rem]">
+        <button
+            className="z-10 px-3 h-[3rem] w-[7rem] mt-[2rem] mx-3 bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
+            onClick={() => window.open("https://www.figma.com/proto/MfGA57RbqWErt7qTMGdR8c/ReachOut---Design-Draft?node-id=517-3168&t=dwV9uPSWTKMfbXkJ-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=424%3A1831", "_blank")}
+            >
+            Prototype!
+        </button>
+        <button
+            className="z-10 px-3 h-[3rem] w-[7rem] mt-[2rem] mx-3 bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
+            onClick={() => window.open("https://www.figma.com/proto/MfGA57RbqWErt7qTMGdR8c/ReachOut---Design-Draft?node-id=517-3168&t=dwV9uPSWTKMfbXkJ-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=424%3A1831", "_blank")}
+            >
+            Github!
+        </button>
+
+        </div>
+      </div>
+
       <div className="w-full max-w-[70rem] mt-[8rem]">
-        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem]">Research</h2>
+        <h2 className="font-mitr font-semibold text-[2rem]">Research</h2>
         <p className="w-[40rem] font-quicksand leading-[2rem]">
           To begin this project, the team researched what happens when someone is released from prison. Here's what was found...
         </p>
@@ -252,7 +295,7 @@ export default function Reachout({ params }) {
         <div className="w-[50%]">
             <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Logo and Branding</h2>
             <ul className="font-quicksand leading-[2rem] ml-8 list-none">
-                <li className="mt-4">Our logo combines two main parts.</li>
+                <li className="mt-4">The logo combines two main parts.</li>
                 <li className="mt-4 flex">
                     <span className="mr-2">1.</span>
                     The hands, which represent aid and assistance to symbolize ReachOut’s mission to assist formerly incarcerated individuals.
@@ -282,18 +325,48 @@ export default function Reachout({ params }) {
             />
         </div>
       </div>
+
+      <div className="w-full max-w-[70rem] mt-[8rem] bg-[#222A41] rounded-lg p-6">
+        <h2 className="font-mitr font-semibold text-[2rem] ml-8">Design Process</h2>
+        <p className="w-full   mt-4 font-quicksand leading-[2rem] ml-8">
+            The design process relied heavily on user feedback. Below is an example of how our design for the listing cards changed based on user feedback.
+            Through this practice the cards were refined to have tooltips and maintain the same colour to minimize confusion. 
+        </p> 
+      </div>
+      <div className="w-full max-w-[70rem] mt-8 flex justify-center">
+      <div className="flex justify-between w-full">
+        {timelineStages.map((stage, index) => (
+          <motion.div
+            key={stage.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.3 }}
+            viewport={{ once: true }}
+            className="bg-[#222A41] rounded-lg p-6 text-center shadow-md w-[30%]"
+          >
+            <img
+              src={stage.image}
+              alt={stage.title}
+              className="w-full h-[15rem] object-cover rounded-lg mb-4"
+            />
+            <h3 className="font-mitr text-2xl font-semibold text-white">{stage.title}</h3>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+
       <div className=" w-[70rem] content-center">
         <h2 className="font-mitr font-semibold text-[2rem] ml-8 mt-[8rem]">Challenges</h2>
         <ul className="font-quicksand leading-[2rem] ml-8 list-none">
                 <li className="mt-4">During this process the team encountered many challenges. the most notable ones being</li>
                 <li className="mt-4 flex">
-                    <span className="mr-2">1.</span>
+                    <span className="mr-2 font-bold text-lg">1.</span>
                     Interviews. Finding willing participants to answer our surveys and sit down for interviews was very difficult.
                     To combat this the team used personal connections, and sent out many emails to gather enough data to make meaningfull 
                     steps forward
                 </li>
-                <li className="mt-2 flex">
-                    <span className="mr-2">2.</span>
+                <li className="mt-4 flex">
+                    <span className="mr-2 font-bold text-lg">2.</span>
                     Logo. Finding a way to incorperate the bird, hands, and a professional atmosphere into the logo while maintianing
                     a cohesive image was difficult. To ensure the logo effectively 
                     combined these aspects many drafts were sketched out and feedback was received at various points during the design process. 
@@ -301,16 +374,25 @@ export default function Reachout({ params }) {
             </ul>
       </div>
 
-      <h2 className="font-mitr font-semibold text-[2rem] ml-8 mt-[8rem]">The Final Product</h2>
-        <p className="mt-4 font-quicksand leading-[2rem] ml-8">
-            After months of hard work, the app was finally released.
-        </p> 
-        <button
-            className="z-10 px-3 h-[3rem] mt-[2rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
-            onClick={() => window.open("https://wereachout.ca", "_blank")}
-            >
-            Take a look!
-        </button>
+      <div className="w-full max-w-[70rem] mt-[8rem] bg-[#374869] rounded-[1rem]">
+        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Final Screens</h2>
+        <img
+                src="/screens.png"
+                alt="screens of settings, job listings and client management"
+                className="rounded-[1rem] translate-x-[4rem]"
+            />
+      </div>
+
+      <div className="w-full max-w-[70rem] mt-[8rem] bg-[#222A41] rounded-[1rem]">
+        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Brochure</h2>
+        <img
+                src="/brochure.png"
+                alt="screens of settings, job listings and client management"
+                className="rounded-[1rem] scale-110"
+            />
+      </div>
+
+
     </div>
   );
 }
