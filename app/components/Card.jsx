@@ -16,7 +16,7 @@ export default function Card({ imgUrl, projectName, softwares }) {
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-70 rounded-[1rem] opacity-0 group-hover:opacity-100 duration-300 flex flex-col justify-center items-center text-center p-4">
-          <h2 className="font-quicksand text-3xl font-bold text-white">
+          <h2 className="font-mitr text-3xl font-semibold text-white">
             {projectName}
           </h2>
           <h3 className="mt-2 text-white font-semibold font-quicksand">Software Used:</h3>
