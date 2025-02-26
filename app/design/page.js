@@ -20,12 +20,22 @@ export default function Design() {
       projectName: "Elfheim",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
+    {
+      imgUrl: "/drill.webp",
+      projectName: "Drill",
+      softwares: ["Adobe Illustrator"],
+    },
+    {
+      imgUrl: "/quackattack.png",
+      projectName: "QuackAttack",
+      softwares: ["Adobe Illustrator", "Krita", "Photoshop", "AfterEffects", "Gdevelop"],
+    },
   ];
 
 
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-6 p-6 h-lvh">
+      <div className="flex flex-wrap justify-center gap-6 p-6 ">
         {projects.map((project, index) => (
           <Card
             key={index}
@@ -35,7 +45,6 @@ export default function Design() {
           />
         ))}
       </div>
-      <Footer />
     </>
   );
 }

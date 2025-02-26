@@ -1,11 +1,28 @@
 "use client";
 import styles from "./hivefive.module.css";
-import Footer from "../components/Footer";
+
+import { FaChevronRight } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 
 export default function hivefive({ params }) {
-  const { projectName } = params;
-
+    const projectName = params?.projectName || "";
+  
+      const router = useRouter();
+    
+      const projects = [
+        
+        { name: "ReachOut", url: "/reachout" },
+        { name: "Driftstone", url: "/driftstone" },
+      ];
+    
+      const currentIndex = projects.findIndex(
+        (p) => p.name.toLowerCase() === projectName.toLowerCase()
+      );
+    
+      // If project is not found, default to first project to avoid errors
+      const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
+    
   return (
     <div className={styles.container}>
         {/* Main Section */}
@@ -103,7 +120,12 @@ export default function hivefive({ params }) {
           </div>
         </div>   
         <div classnmame={styles.mainSection}>
-        
+        <div className={styles.upNextSection}>
+        <button className="p-2 flex items-center justify-center gap-2 z-10 w-[9rem] mt-[4.25rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition group" onClick={() => router.push(nextProject.url)}>
+          Next Project 
+          <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
+        </button>
+      </div>   
             
         </div>
     </div>
