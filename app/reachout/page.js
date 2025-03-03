@@ -418,6 +418,22 @@ export default function Reachout({ params }) {
             />
       </div>
 
+      <div className="w-full max-w-[70rem] mt-[8rem] bg-[#121726] rounded-[1rem] p-1">
+        
+        <h2 className="font-mitr font-semibold text-[2rem] my-[2rem] ml-8">Promotional Video</h2>
+        <iframe
+          width="100%"
+          className="rounded-[1rem]"
+          src="https://www.youtube.com/embed/MhxQqgt3FUk"
+          title="ReachOut Video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="h-[40rem] rounded-[1rem]"
+        ></iframe>
+  
+        </div>
+
       <div className={styles.upNextSection}>
         <button className="p-2 flex items-center justify-center gap-2 z-10 w-[9rem] mt-[4.25rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition group" onClick={() => router.push(nextProject.url)}>
           Next Project 
