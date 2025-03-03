@@ -48,18 +48,24 @@ const Navbar = () => {
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/contact">Contact</Link>
           </button>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+            <Link href="/about">About</Link>
+          </button>
         </div>
       </nav>  
 
       {/* Logo */}
       <div className="fixed top-0 left-0 p-4 z-30">
-        <img
-          src="/logo.png"
-          alt="Logo"
-          className="w-[7rem] h-auto transition-all duration-300"
-        />
+        <Link href="/">
+          <img
+            src="/logo.png"
+            alt="Logo"
+            className="w-[7rem] h-auto transition-all duration-300 cursor-pointer"
+          />
+        </Link>
       </div>
 
+      
       {/* Hamburger Menu (Visible on medium screens and below) */}
       <div
         className="fixed top-0 right-0 p-4 z-40 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 lg:hidden"
@@ -90,6 +96,9 @@ const Navbar = () => {
             </button>
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/contact">Contact</Link>
+            </button>
+            <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+              <Link href="/about">About</Link>
             </button>
             <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
               <Link href="/design">Design</Link>
