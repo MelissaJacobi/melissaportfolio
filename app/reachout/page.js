@@ -127,7 +127,7 @@ export default function Reachout({ params }) {
         </button>
         <button
             className="z-10 px-3 h-[3rem] w-[7rem] mt-[2rem] mx-3 bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
-            onClick={() => window.open("https://www.figma.com/proto/MfGA57RbqWErt7qTMGdR8c/ReachOut---Design-Draft?node-id=517-3168&t=dwV9uPSWTKMfbXkJ-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=424%3A1831", "_blank")}
+            onClick={() => window.open("https://github.com/mangaslave/ReachOut", "_blank")}
             >
             Github!
         </button>

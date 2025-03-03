@@ -6,8 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-6 font-quicksand mt-auto">
       <div className="container mx-auto text-center">
-        <p className="text-sm mt-2">
-        </p>
+        <p className="text-sm mt-2"></p>
         <p className="text-sm mt-2">
           <a
             href="https://www.linkedin.com/in/melissa-jacobi"
