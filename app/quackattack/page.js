@@ -29,9 +29,9 @@ export default function quackattack({ params }) {
     { name: "Rooster", role: "Enemy", image: "/rooster.png" },
     { name: "Mole", role: "Enemy", image: "/mole.png" },
     { name: "Chuck", role: "Enemy", image: "/Boy.png" },
-    { name: "Chef", role: "Boss", image: "/chef.png" },
+    { name: "Chef", role: "Boss", image: "/Chef.png" },
     { name: "Raven", role: "Shopkeep", image: "/Crow.png" },
-    { name: "Owl", role: "Mentor", image: "/owl.png" },
+    { name: "Owl", role: "Mentor", image: "/Owl.png" },
   ];
 
   return (
