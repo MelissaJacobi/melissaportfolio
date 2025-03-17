@@ -118,7 +118,37 @@ export default function hivefive({ params }) {
                 />
             </div>
           </div>
-        </div>   
+        </div>  
+        <div className={styles.container}>
+          <h2 className={`${styles.title}`}>Logo</h2>
+          <div className="flex justify-center">
+            <div className="flex justify-center bg-white p-8 rounded-[1rem] w-full">
+              <img
+                src="/logo-bee.svg"
+                alt="Elfheim"
+                className={styles.mockupImage}
+              />
+            </div>
+          </div>
+        </div>  
+
+        <div className={styles.container}>
+          <h2 className={`${styles.title}`}>Typography</h2>
+          <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
+            <div className={styles.colourContainer}>
+              <img
+                src="/hve-five-typeface.png"
+                alt="hive-five-typeface"
+                className="rounded-[1rem] w-[75%] m-3"
+              />
+              <img
+                  src="/hive-five-headings.png"
+                  alt="Elfheim"
+                className="rounded-[1rem] w-[75%] m-3"
+                />
+            </div>
+          </div>
+        </div>    
         <div classnmame={styles.mainSection}>
         <div className={styles.upNextSection}>
         <button className="p-2 flex items-center justify-center gap-2 z-10 w-[9rem] mt-[4.25rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition group" onClick={() => router.push(nextProject.url)}>

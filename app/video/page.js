@@ -9,6 +9,11 @@ export default function uiux() {
       projectName: "Tutorial",
       softwares: [ "Adobe Illustrator", "After Effects"],
     },
+    {
+      imgUrl: "/violin-tut.webp",
+      projectName: "Violin",
+      softwares: [ "Adobe Illustrator", "After Effects"],
+    },
   ];
 
 
