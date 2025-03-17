@@ -339,7 +339,7 @@ export default function Reachout({ params }) {
         <div className="w-[35%]">
             <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Styleguide</h2>
             <p className="w-[22rem] mt-4 font-quicksand leading-[2rem] ml-8">
-                The goal of the brand colours to be calming and trustworthy. The fonts were chosen to be legible, going with a sans serif to keep it
+                The goal of the brand colours was to be calming and trustworthy. The fonts were chosen to be legible, going with a sans serif to keep it
                 minimalist.
             </p>  
         </div>

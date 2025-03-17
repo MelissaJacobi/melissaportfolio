@@ -1,0 +1,132 @@
+.container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .topSection {
+    width: 100%;
+    max-width: 70rem;
+  }
+  
+  .mainSection {
+    width: 100%;
+    max-width: 70rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mainImageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .colourContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .mainImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-top: 6rem;
+    transition: transform 0.3s;
+    margin-bottom: 2rem;
+  }
+  
+  .mockupImage {
+    height: 10rem;
+    margin: auto;
+    max-width: 40rem;
+    object-fit: cover;
+    animation: moveUpDown 2s ease-in-out infinite;
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .videoWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .muteButton {
+    position: absolute;
+    bottom: 35px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 25%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  .muteButton:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    max-width:70rem;
+  }
+  
+  .title {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+  }
+  
+  .overview {
+    margin-top: 8rem;
+  }
+  
+  .paragraph {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .mainSectionLg {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .textContainer {
+      height: 39rem;
+    }
+  }
+  
+  
+  
+  
