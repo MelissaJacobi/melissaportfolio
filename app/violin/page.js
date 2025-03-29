@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import styles from "./tutorial.module.css";
 import { IoVolumeMute, IoVolumeHigh } from "react-icons/io5";
+import NextProjectButton from "../components/NextProjectButton";
 
 export default function violin({ params }) {
   const { projectName } = params;
@@ -15,19 +16,23 @@ export default function violin({ params }) {
     }
   };
 
+  const projects = [
+    { name: "driftstone", url: "/driftstone", image: "/driftstone-hero.jpg" },
+  ];
+  const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === (projectName?.toLowerCase() || ""));
+  const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
+
+
+
   return (
     <div className={styles.container}>
-      {/* Main Section */}
       <div className={styles.mainSection}>
         <div className={styles.mainImageContainer}>
-          {/* Video Wrapper for Relative Positioning */}
           <div className={styles.videoWrapper}>
-            <video ref={videoRef} className={styles.mainImage} autoPlay loop muted={isMuted}>
+            <video ref={videoRef} className={`${styles.mainImage}  border-solid border-4 border-[#7e5531]`} autoPlay loop muted={isMuted}>
               <source src="/Melissa_Jacobi.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-
-            {/* Mute Button */}
             <button className={styles.muteButton} onClick={toggleMute}>
               {isMuted ? <IoVolumeMute size={24} /> : <IoVolumeHigh size={24} />}
             </button>
@@ -45,6 +50,8 @@ export default function violin({ params }) {
           hold the syringe, but also the correct speed at which to feed the chick.
         </p>
       </div>
+      
+      <NextProjectButton nextProjectUrl={nextProject.url} image={nextProject.image} /> 
     </div>
   );
 }

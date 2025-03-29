@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { IoVolumeMute, IoVolumeHigh } from "react-icons/io5";
-
+import NextProjectButton from "../components/NextProjectButton";
 import { FaChevronRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
@@ -12,13 +12,9 @@ export default function drill({ params }) {
   const projectName = params?.projectName || "";
 
   const projects = [
-    { name: "QuackAttack", url: "/quackattack" }
+    { name: "QuackAttack", url: "/quackattack", image: "/quackattack.png" },
   ];
-
-  const currentIndex = projects.findIndex(
-    (p) => p.name.toLowerCase() === projectName.toLowerCase()
-  );
-
+  const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
 
 
@@ -45,12 +41,7 @@ export default function drill({ params }) {
 
 
       </div>
-      <div >
-        <button className="p-2 flex items-center justify-center gap-2 z-10 w-[9rem] mt-[4.25rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition group" onClick={() => router.push(nextProject.url)}>
-          Next Project 
-          <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
-      </div> 
+      <NextProjectButton nextProjectUrl={nextProject.url} image={nextProject.image} /> 
     </div>
   );
 }

@@ -3,6 +3,7 @@ import styles from "./gatsby.module.css";
 
 import { FaChevronRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import NextProjectButton from "../components/NextProjectButton";
 
 
 export default function Gatsby({ params }) {
@@ -11,23 +12,14 @@ export default function Gatsby({ params }) {
     const router = useRouter();
   
     const projects = [
-      
-      { name: "Elfheim", url: "/elfheim" },
-      { name: "Driftstone", url: "/driftstone" },
+      { name: "Elfheim", url: "/elfheim", image: "/elfheim.jpg" },
     ];
-  
-    const currentIndex = projects.findIndex(
-      (p) => p.name.toLowerCase() === projectName.toLowerCase()
-    );
-  
-    // If project is not found, default to first project to avoid errors
+    const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
     const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
   
 
-
   return (
     <div className={styles.container}>
-      {/* Main Section */}
       <div className={`${styles.mainSection} ${styles.mainSectionLg}`}>
         <div className={styles.mainImageContainer}>
           <img
@@ -74,12 +66,7 @@ export default function Gatsby({ params }) {
         </div>
         </div>
       </div>
-      <div className={styles.upNextSection}>
-        <button className="p-2 flex items-center justify-center gap-2 z-10 w-[9rem] mt-[4.25rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition group" onClick={() => router.push(nextProject.url)}>
-          Next Project 
-          <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
-      </div>   
+      <NextProjectButton nextProjectUrl={nextProject.url} image={nextProject.image} />   
     </div>
   );
 }

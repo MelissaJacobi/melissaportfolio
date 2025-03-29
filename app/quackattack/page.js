@@ -3,17 +3,23 @@ import { useState, useRef } from "react";
 import { IoVolumeMute, IoVolumeHigh } from "react-icons/io5";
 import { FaChevronRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import NextProjectButton from "../components/NextProjectButton";
 
 export default function quackattack({ params }) {
   const router = useRouter();
   const projectName = params?.projectName || "";
 
-  const projects = [{ name: "Hivefive", url: "/hivefive" }];
+  const projects = [
+    { name: "Hivefive", url: "/hivefive", image: "/hivefive.jpg" },
+  ];
   const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
 
+
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
+
+  const [hovered, setHovered] = useState(false);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -37,7 +43,7 @@ export default function quackattack({ params }) {
   return (
     <div className="p-[1.5Rem] flex flex-col items-center w-full">
       <div className="relative flex justify-center w-[70rem]">
-        <video ref={videoRef} className="w-full object-cover rounded-[1rem] mt-[6rem] mb-[2rem]" autoPlay loop muted={isMuted}>
+        <video ref={videoRef} className="w-full border-solid border-4 border-[#2c5c1c] object-cover rounded-[1rem] mt-[6rem] mb-[2rem]" autoPlay loop muted={isMuted}>
           <source src="/qa-promo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -119,12 +125,7 @@ export default function quackattack({ params }) {
           </video>
         </div>
       </div>
-      <div>
-        <button className="p-2 flex items-center justify-center gap-2 z-10 w-[9rem] mt-[4.25rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition group" onClick={() => router.push(nextProject.url)}>
-          Next Project
-          <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
-      </div>
+      <NextProjectButton nextProjectUrl={nextProject.url} image={nextProject.image} />
     </div>
   );
 }
