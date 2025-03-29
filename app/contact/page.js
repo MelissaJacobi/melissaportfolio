@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./contact.module.css";
 import { useState } from "react";
 import Footer from "../components/Footer";
 
@@ -41,7 +42,7 @@ export default function Contact() {
 
   return (
     <>
-      <div className="h-[calc(100vh-5rem)] flex justify-center items-center bg-black text-white relative overflow-y-hidden">
+      <div className={`${styles.contactContainer} md:block`}>
         <main className="flex-grow max-w-[40rem] p-4 relative z-10">
           <h1 className="text-[3rem] font-bold text-center mb-[5rem] font-mitr">Let's Connect!</h1>
           <form className="space-y-4" onSubmit={handleSubmit}>

@@ -2,6 +2,7 @@
 import styles from "./driftstone.module.css";
 import { FaChevronRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import NextProjectButton from "../components/NextProjectButton";
 
 export default function Elfheim({ params }) {
   const router = useRouter();
@@ -10,15 +11,9 @@ export default function Elfheim({ params }) {
   const projectName = params?.projectName || "";
 
   const projects = [
-    { name: "Gatsby", url: "/gatsby" },
-    { name: "Elfheim", url: "/elfheim" },
+    { name: "Gatsby", url: "/gatsby", image: "/gatsby-glamour.jpg" },
   ];
-
-  const currentIndex = projects.findIndex(
-    (p) => p.name.toLowerCase() === projectName.toLowerCase()
-  );
-
-  // If project is not found, default to first project to avoid errors
+  const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
 
   return (
@@ -61,12 +56,7 @@ export default function Elfheim({ params }) {
         </div>
       </div>
 
-      <div className={styles.upNextSection}>
-        <button className="p-2 flex items-center justify-center gap-2 z-10 w-[9rem] mt-[4.25rem] mb-[3.25rem] bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition group" onClick={() => router.push(nextProject.url)}>
-          Next Project 
-          <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
-      </div>
+      <NextProjectButton nextProjectUrl={nextProject.url} image={nextProject.image} />
     </div>
   );
 }
