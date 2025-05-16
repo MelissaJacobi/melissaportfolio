@@ -6,27 +6,27 @@ import Footer from "../components/Footer";
 export default function Design() {
   const projects = [
     {
-      imgUrl: "/can-mockup.jpg",
+      imgUrl: "/can-cover.png",
       projectName: "Driftstone",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
-      imgUrl: "/gatsby-mockup-sm.jpg",
+      imgUrl: "/gatsby-cover.png",
       projectName: "Gatsby",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
-      imgUrl: "/elfheim-mockup-2.jpg",
+      imgUrl: "/elfheim-cover.jpg",
       projectName: "Elfheim",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
-      imgUrl: "/drill.webp",
+      imgUrl: "/drill-cover-01.png",
       projectName: "Drill",
       softwares: ["Adobe Illustrator"],
     },
     {
-      imgUrl: "/quackattack.png",
+      imgUrl: "/quackattack-cover.jpg",
       projectName: "QuackAttack",
       softwares: ["Adobe Illustrator", "Krita", "Photoshop", "AfterEffects", "Gdevelop"],
     },
@@ -35,7 +35,7 @@ export default function Design() {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-6 p-6 ">
+      <div className="flex flex-wrap gap-10 p-10 ">
         {projects.map((project, index) => (
           <Card
             key={index}

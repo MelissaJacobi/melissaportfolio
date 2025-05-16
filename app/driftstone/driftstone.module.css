@@ -33,7 +33,6 @@
 .mainImage {
   width: 100%;
   object-fit: cover;
-  border-radius: 1rem;
   transition: transform 0.3s;
   margin-bottom: 2rem;
   margin-top: 3rem;
@@ -46,7 +45,6 @@
   margin: auto;
   max-width: 40rem;
   object-fit: cover;
-  border-radius: 1rem;
 }
 
 .textContainer {
@@ -59,7 +57,7 @@
 }
 
 .title {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Mitr", sans-serif;
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 3rem;
@@ -67,7 +65,7 @@
 }
 
 .variations {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Mitr", sans-serif;
   font-weight: bold;
   font-size: 2rem;
   margin-top: 4rem;

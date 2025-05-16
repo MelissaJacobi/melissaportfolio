@@ -18,7 +18,7 @@ export default function uiux() {
 
 
   return (
-    <div className="flex flex-wrap justify-center gap-6 p-6">
+    <div className="flex flex-wrap gap-10 p-10 ">
       {projects.map((project, index) => (
         <Card
           key={index}

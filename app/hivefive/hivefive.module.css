@@ -33,7 +33,6 @@
   .mainImage {
     width: 100%;
     object-fit: cover;
-    border-radius: 1rem;
     transition: transform 0.3s;
     margin-bottom: 2rem;
   }
@@ -68,7 +67,7 @@
   }
   
   .title {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Mitr", sans-serif;
     font-weight: bold;
     font-size: 2rem;
     margin-bottom: 3rem;

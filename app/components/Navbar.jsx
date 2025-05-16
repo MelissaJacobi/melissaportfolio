@@ -23,17 +23,24 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto"; // Ensure cleanup
+    };
+  }, [isOpen]); 
+
   return (
     <>
       {/* Navigation Bar */}
       <nav
-        className="sticky top-0 z-10 flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] bg-black/75 transition-colors duration-300 backdrop-blur-sm"
+        className="sticky top-0 z-[9998] flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] bg-black/75 transition-colors duration-300 backdrop-blur-sm"
         style={{ height: "4rem" }}
       >
         {/* Links visible on large screens */}
         <div className="hidden lg:flex space-x-4">
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/">Home</Link>
+            <Link href="/home">Home</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/design">Design</Link>
@@ -41,10 +48,11 @@ const Navbar = () => {
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/uiux">UI/UX</Link>
           </button>
-          
+          {/*}
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/video">Video</Link>
           </button>
+          */}
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/contact">Contact</Link>
           </button>
@@ -55,7 +63,7 @@ const Navbar = () => {
       </nav>  
 
       {/* Logo */}
-      <div className="fixed top-0 left-0 p-4 z-30">
+      <div className="fixed top-0 left-0 p-4 z-[9999]">
         <Link href="/">
           <img
             src="/logo.png"
@@ -68,7 +76,7 @@ const Navbar = () => {
       
       {/* Hamburger Menu (Visible on medium screens and below) */}
       <div
-        className="fixed top-0 right-0 p-4 z-40 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 lg:hidden"
+        className="fixed top-0 right-0 p-4 z-[9999] flex flex-col items-center justify-center cursor-pointer transition-all duration-300 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div
@@ -84,34 +92,28 @@ const Navbar = () => {
       </div>
 
       {/* Menu Overlay */}
-      {isOpen && (
-        <div
-          className={`fixed top-0 right-0 bottom-0 z-30 transition-transform transform ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="flex flex-col justify-start items-center p-4 bg-black/75 backdrop-blur-[0.2rem] w-[15rem] h-screen rounded-l-[4rem] shadow-lg space-y-4">
-            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/">Home</Link>
-            </button>
-            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/contact">Contact</Link>
-            </button>
-            <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
-              <Link href="/about">About</Link>
-            </button>
-            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/design">Design</Link>
-            </button>
-            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/uiux">UI/UX</Link>
-            </button>
-            <button className="text-white p-2 font-quicksand duration-300 hover:translate-x-1">
-              <Link href="/video">Video</Link>
-            </button>
-          </div>
-        </div>
-      )}
+      <div
+        className={`fixed top-0 right-0 bottom-0 z-30 transition-transform duration-300 transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } w-screen h-full bg-black/85 backdrop-blur-[0.3rem] shadow-lg p-10 flex flex-col space-y-4`}
+      >
+        {[
+          { href: "/", label: "Home" },
+          { href: "/contact", label: "Contact" },
+          { href: "/about", label: "About" },
+          { href: "/design", label: "Design" },
+          { href: "/uiux", label: "UI/UX" },
+        ].map((item) => (
+          <button
+            key={item.href}
+            onClick={() => setIsOpen(false)}
+            className="text-white font-quicksand text-lg text-left hover:translate-x-1 transition"
+          >
+            <Link href={item.href}>{item.label}</Link>
+          </button>
+        ))}
+      </div>
+
     </>
   );
 };
