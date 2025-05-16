@@ -5,20 +5,20 @@ import Card from "../components/Card";
 export default function uiux() {
   const projects = [
     {
-      imgUrl: "/hivefive.jpg",
+      imgUrl: "/hive-five-cover.png",
       projectName: "Hivefive",
-      softwares: [ "Adobe Illustrator", "javascript", "Next.js", "Figma", "HTML", "CSS"],
+      softwares: [ "Adobe Illustrator", "Javascript", "Next.js", "Figma", "HTML", "CSS"],
     },
     {
-      imgUrl: "/reachout-cover.jpg",
+      imgUrl: "/reachout-cover-proper.jpg",
       projectName: "ReachOut",
-      softwares: ["Adobe After Effects", "Adobe Illustrator", "javascript", "ShadCN", "Figma", "HTML", "CSS", "Trello"],
+      softwares: ["Adobe After Effects", "Adobe Illustrator", "Adobe Premier Pro", "Figma", "Trello"],
     },
   ];
 
 
   return (
-    <div className="flex flex-wrap justify-center gap-6 p-6">
+    <div className="flex flex-wrap gap-10 p-10 ">
       {projects.map((project, index) => (
         <Card
           key={index}

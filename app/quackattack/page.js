@@ -43,7 +43,7 @@ export default function quackattack({ params }) {
   return (
     <div className="p-[1.5Rem] flex flex-col items-center w-full">
       <div className="relative flex justify-center w-[70rem]">
-        <video ref={videoRef} className="w-full border-solid border-4 border-[#2c5c1c] object-cover rounded-[1rem] mt-[6rem] mb-[2rem]" autoPlay loop muted={isMuted}>
+        <video ref={videoRef} className="w-full object-cover mt-[6rem] mb-[2rem]" autoPlay loop muted={isMuted}>
           <source src="/qa-promo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -64,7 +64,7 @@ export default function quackattack({ params }) {
              the mastermind behind the farm's plight.
             </p>
           </div>
-          <div className="flex  bg-[#2c5c1c] p-5 rounded-[1rem]">
+          <div className="flex  bg-[#1d1d1d] p-5">
             <div>
               <h2  className="font-mitr font-semibold text-[2rem]">My Role</h2>
               <p className="font-quicksand leading-[2rem]">
@@ -81,7 +81,7 @@ export default function quackattack({ params }) {
             <img
               src="/melissa-duck.png"
               alt="role image"
-              className="rounded-[1rem] h-[10rem] mx-5"
+              className=" h-[10rem] mx-5"
             />
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function quackattack({ params }) {
           <h2 className="font-mitr font-semibold text-[2rem]">Characters</h2>
           <div className="grid grid-cols-3 gap-4">
             {characters.map((char, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-lg bg-white h-[10rem] flex items-center justify-center">
+              <div key={index} className="relative group overflow-hidden bg-[#1d1d1d] h-[10rem] flex items-center justify-center">
                 <img 
                   src={char.image} 
                   alt={char.name} 
@@ -113,13 +113,13 @@ export default function quackattack({ params }) {
           keeping file sizes down, learning about movement, and the time-consuming nature of frame-by-frame animation.
         </p>
         <div className="w-full flex justify-between items-center gap-[2rem] mt-8">
-          <video className="object-cover rounded-[1rem] h-[15rem] w-[15rem]" autoPlay loop muted playsInline>
+          <video className="object-cover  h-[15rem] w-[15rem]" autoPlay loop muted playsInline>
             <source src="/duck.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <img src="/Chef-Attack.gif" alt="chef attack animation" className="object-cover rounded-[1rem] h-[15rem] w-[15rem]" />
-          <img src="/duck-flap.gif" alt="duck flap animation" className="object-cover rounded-[1rem] h-[15rem] w-[15rem]" />
-          <video className="object-cover rounded-[1rem] h-[15rem] w-[15rem]" autoPlay loop muted playsInline>
+          <img src="/Chef-Attack.gif" alt="chef attack animation" className="object-cover h-[15rem] w-[15rem]" />
+          <img src="/duck-flap.gif" alt="duck flap animation" className="object-cover h-[15rem] w-[15rem]" />
+          <video className="object-cover h-[15rem] w-[15rem]" autoPlay loop muted playsInline>
             <source src="/mole.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

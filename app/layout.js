@@ -2,7 +2,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ScrollToTopButton from './components/ScrollToTopButton'; // Import the component
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 export const metadata = {
   title: "Melissa's Portfolio",
