@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Links visible on large screens */}
         <div className="hidden lg:flex space-x-4">
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
           </button>
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/design">Design</Link>
