@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 export default function Design() {
   const projects = [
     {
-      imgUrl: "/can-cover.png",
+      imgUrl: "/can-mockup.png",
       projectName: "Driftstone",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
@@ -16,17 +16,17 @@ export default function Design() {
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
-      imgUrl: "/elfheim-cover.jpg",
+      imgUrl: "/elfheim-cover.png",
       projectName: "Elfheim",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
-      imgUrl: "/drill-cover-01.png",
+      imgUrl: "/drill-cover.png",
       projectName: "Drill",
       softwares: ["Adobe Illustrator"],
     },
     {
-      imgUrl: "/quackattack-cover.jpg",
+      imgUrl: "/quackattack-cover.png",
       projectName: "QuackAttack",
       softwares: ["Adobe Illustrator", "Krita", "Photoshop", "AfterEffects", "Gdevelop"],
     },

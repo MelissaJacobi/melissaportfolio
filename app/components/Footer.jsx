@@ -4,7 +4,7 @@ import { CiLinkedin } from "react-icons/ci";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-6 font-quicksand mt-auto">
+    <footer className="border-y-solid border-y-[0.7px] border-y-black bg-[var(--secondary)] py-6 font-quicksand mt-auto">
       <div className="container mx-auto text-center">
         <p className="text-sm mt-2"></p>
         <p className="text-sm mt-2">
@@ -12,12 +12,12 @@ export default function Footer() {
             href="https://www.linkedin.com/in/melissa-jacobi"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white text-[2rem] inline-flex items-center gap-2 hover:translate-y-1 duration-300"
+            className="text-[var(--foreground)] text-[2rem] inline-flex items-center gap-2 hover:translate-y-1 duration-300"
           >
             <CiLinkedin />
           </a>
         </p>
-        <p className="text-xs text-gray-400 mt-4">
+        <p className="text-xs text-[var(--foreground)] mt-4">
           &copy; {new Date().getFullYear()} Melissa Jacobi. All rights reserved.
         </p>
       </div>

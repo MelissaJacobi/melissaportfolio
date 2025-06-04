@@ -82,15 +82,15 @@ export default function Reachout({ params }) {
           </video>
         </div>
         <div className="w-[23rem]">
-          <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem]">ReachOut</h2>
-          <h2 className="font-quicksand text-[1.5rem] mr-[2rem]">Building Bridges to Employment</h2>
-          <p className="w-[18rem] font-quicksand leading-[2rem] mb-[15rem] mt-[1rem] mr-[4rem]">
+          <h2 className="font-mitr font-semibold text-white text-[2rem] mt-[2rem]">ReachOut</h2>
+          <h2 className="font-quicksand text-white text-[1.5rem] mr-[2rem]">Building Bridges to Employment</h2>
+          <p className="w-[18rem] font-quicksand leading-[2rem] text-white mb-[15rem] mt-[1rem] mr-[4rem]">
             ReachOut is a platform designed to bridge the gap between organizations helping ex-offenders and employers who are open to second-chance hiring.
           </p>
           <div className="flex justify-between">
             <div className="w-[50%]">
-              <h2 className="font-mitr font-semibold text-[2rem] mt-10">My Role</h2>
-              <p className="w-[25rem] font-quicksand leading-[2rem] mb-[2rem]">Graphic Designer</p>
+              <h2 className="font-mitr font-semibold text-[2rem] mt-10 text-white">My Role</h2>
+              <p className="w-[25rem] font-quicksand leading-[2rem] mb-[2rem] text-white">Graphic Designer</p>
             </div>
             <div>
               <img
@@ -112,13 +112,13 @@ export default function Reachout({ params }) {
         </p> 
         <div className="flex justify-center mb-[4rem]">
         <button
-            className=" px-3 h-[3rem] w-[7rem] mt-[2rem] mx-3 bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
+            className=" px-3 h-[3rem] w-[7rem] mt-[2rem] mx-3 bg-white text-black border-black border-[1px] border-solid rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
             onClick={() => window.open("https://www.figma.com/proto/MfGA57RbqWErt7qTMGdR8c/ReachOut---Design-Draft?node-id=517-3168&t=dwV9uPSWTKMfbXkJ-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=424%3A1831", "_blank")}
             >
             Prototype!
         </button>
         <button
-            className=" px-3 h-[3rem] w-[7rem] mt-[2rem] mx-3 bg-white text-black rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
+            className=" px-3 h-[3rem] w-[7rem] mt-[2rem] mx-3 bg-white text-black border-black border-[1px] border-solid  rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
             onClick={() => window.open("https://github.com/mangaslave/ReachOut", "_blank")}
             >
             Github!
@@ -150,7 +150,7 @@ export default function Reachout({ params }) {
         </div>
 
         {/* Content Box with responsive layout */}
-        <div className="bg-[#222A41] shadow-md w-full lg:w-[60rem] p-6 flex flex-col lg:flex-row items-start lg:items-center">
+        <div className="bg-[#222A41] shadow-md w-full lg:w-[60rem] p-6 flex text-white flex-col lg:flex-row items-start lg:items-center">
           {/* Text */}
           <div className="lg:mr-6">
             <h3 className="font-mitr text-2xl font-semibold">{step.title}</h3>
@@ -186,7 +186,7 @@ export default function Reachout({ params }) {
         <h2 className="font-mitr font-semibold text-[2rem] mb-[2rem]">Discoveries</h2>
         <div className="mt-4 space-y-12">
           {discoveryText.map((sentence, sentenceIndex) => (
-            <div key={sentenceIndex} className="text-2xl font-quicksand text-white">
+            <div key={sentenceIndex} className="text-2xl font-quicksand text-black">
               {sentence.split(" ").map((word, wordIndex) => (
                 <motion.span
                   key={wordIndex}
@@ -205,8 +205,8 @@ export default function Reachout({ params }) {
       </div>
 
       <div className="w-full max-w-[70rem] mt-[8rem] bg-[#374869] ">
-        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Personas</h2>
-        <p className="w-[80%] font-quicksand leading-[2rem] ml-8 mr-6">
+        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] text-white ml-8">Personas</h2>
+        <p className="w-[80%] font-quicksand text-white leading-[2rem] ml-8 mr-6">
          Based on these discoveries two distinct personas were created. One non-profit worker and one Employer interested in second chance hiring.
         </p>
         <div className="flex justify-between mt-8 p-2">
@@ -249,7 +249,7 @@ export default function Reachout({ params }) {
       {/* Flows Section */}
         <div className="w-full max-w-[70rem] mt-[8rem] px-4 py-8">
           <h2 className="font-mitr font-semibold text-[2rem] ml-4">Flows</h2>
-          <p className="w-full font-quicksand leading-[2rem] ml-4">
+          <p className="w-full font-quicksand leading-[2rem] ml-4 ">
             This research also informed two distinct Flows. One for Non-profit workers, and one for Employers.
           </p>
 
@@ -269,7 +269,7 @@ export default function Reachout({ params }) {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center transition-opacity duration-300 px-4">
                   <p className="text-white text-xl font-mitr w-full h-[3rem]">Organization Flow</p>
-                  <p className="w-full max-w-[18rem] font-quicksand">
+                  <p className="w-full max-w-[18rem] text-white font-quicksand">
                     The Organization flow allows non-profits to keep their clients organized, view job listings, and create new resumes for their clients.
                   </p>
                   <p className="w-full max-w-[20rem] mt-4 font-quicksand text-gray-300">Click to see more!</p>
@@ -292,7 +292,7 @@ export default function Reachout({ params }) {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center transition-opacity duration-300 px-4">
                   <p className="text-white text-xl font-mitr w-full h-[3rem]">Employer Flow</p>
-                  <p className="w-full max-w-[18rem] font-quicksand">
+                  <p className="w-full text-white max-w-[18rem] font-quicksand">
                     The Employer flow allows businesses to post job listings, keep track of their applicants and stay on top of interviews.
                   </p>
                   <p className="w-full max-w-[20rem] mt-4 font-quicksand text-gray-300">Click to see more!</p>
@@ -306,8 +306,8 @@ export default function Reachout({ params }) {
 
         <div className="w-full max-w-[70rem] h-auto mt-[8rem] flex flex-col md:flex-row bg-[#222A41] overflow-hidden">
           <div className="w-full md:w-[35%] p-8">
-            <h2 className="font-mitr font-semibold text-[2rem]">AI Job Matching</h2>
-            <p className="font-quicksand leading-[2rem] mt-4">
+            <h2 className="font-mitr font-semibold text-[2rem] text-white">AI Job Matching</h2>
+            <p className="font-quicksand leading-[2rem] text-white mt-4">
               The research showed that it was exhausting for organizations to have to filter through each job listing only to find one or two criteria their client lacked.
               With the help of AI and ReachOut, these non-profit workers can tell at a glance whether or not a job posting is right for their client.
             </p>
@@ -353,8 +353,8 @@ export default function Reachout({ params }) {
 
         <div className="w-full max-w-[70rem] h-auto flex flex-col-reverse md:flex-row bg-[#222A41] overflow-hidden mt-[8rem]">
           <div className="w-full md:w-[35%] p-8">
-            <h2 className="font-mitr font-semibold text-[2rem]">Styleguide</h2>
-            <p className="mt-4 font-quicksand leading-[2rem]">
+            <h2 className="font-mitr font-semibold text-[2rem] text-white">Styleguide</h2>
+            <p className="mt-4 font-quicksand leading-[2rem] text-white">
               The goal of the brand colours was to be calming and trustworthy. The fonts were chosen to be legible, going with a sans serif to keep it
               minimalist.
             </p>
@@ -371,8 +371,8 @@ export default function Reachout({ params }) {
 
 
         <div className="w-full max-w-[70rem] mt-[8rem] bg-[#222A41] p-8">
-          <h2 className="font-mitr font-semibold text-[2rem]">Design Process</h2>
-          <p className="w-full mt-4 font-quicksand leading-[2rem]">
+          <h2 className="font-mitr font-semibold text-[2rem] text-white">Design Process</h2>
+          <p className="w-full mt-4 font-quicksand leading-[2rem] text-white">
             The design process relied heavily on user feedback. Below is an example of how our design for the listing cards changed based on user feedback.
             Through this practice the cards were refined to have tooltips and maintain the same colour to minimize confusion. 
           </p> 
@@ -421,16 +421,16 @@ export default function Reachout({ params }) {
       </div>
 
       <div className="w-full max-w-[70rem] mt-[8rem] bg-[#374869]">
-        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Final Screens</h2>
+        <h2 className="font-mitr font-semibold text-[2rem] text-white mt-[2rem] ml-8">Final Screens</h2>
         <img
                 src="/screens.png"
                 alt="screens of settings, job listings and client management"
-                className="translate-x-[2rem]"
+                className=""
             />
       </div>
 
       <div className="w-full max-w-[70rem] mt-[8rem] bg-[#222A41] ">
-        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8">Brochure</h2>
+        <h2 className="font-mitr font-semibold text-[2rem] mt-[2rem] ml-8 text-white">Brochure</h2>
         <img
                 src="/brochure.png"
                 alt="screens of settings, job listings and client management"
@@ -440,7 +440,7 @@ export default function Reachout({ params }) {
 
       <div className="w-full max-w-[70rem] mt-[8rem] bg-[#121726] p-1">
         
-        <h2 className="font-mitr font-semibold text-[2rem] my-[2rem] ml-8">Promotional Video</h2>
+        <h2 className="font-mitr font-semibold text-[2rem] my-[2rem] ml-8 text-white">Promotional Video</h2>
         <iframe
           width="100%"
           className=""

@@ -37,7 +37,7 @@ export default function About() {
       {/* CTA Button */}
       <div className="mt-12 mb-8">
         <Link href="/contact">
-          <button className="px-6 py-2 flex items-center justify-center gap-2 w-[9rem] bg-white text-black rounded-full font-quicksand font-bold duration-300 hover:translate-y-1 transition group">
+          <button className="px-6 py-2 flex items-center justify-center gap-2 w-[12rem] bg-white border-[0.7px] border-black border-solid text-black rounded-full font-quicksand font-bold duration-300 hover:translate-y-1 transition group">
             Get in touch!
             <FaChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
           </button>

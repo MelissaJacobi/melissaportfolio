@@ -5,12 +5,12 @@ import Card from "../components/Card";
 export default function uiux() {
   const projects = [
     {
-      imgUrl: "/hive-five-cover.png",
+      imgUrl: "/hivefive-cover.png",
       projectName: "Hivefive",
       softwares: [ "Adobe Illustrator", "Javascript", "Next.js", "Figma", "HTML", "CSS"],
     },
     {
-      imgUrl: "/reachout-cover-proper.jpg",
+      imgUrl: "/reachout-cover-proper.png",
       projectName: "ReachOut",
       softwares: ["Adobe After Effects", "Adobe Illustrator", "Adobe Premier Pro", "Figma", "Trello"],
     },

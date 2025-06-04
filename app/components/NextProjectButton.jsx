@@ -43,17 +43,17 @@ export default function NextProjectButton({ nextProjectUrl, image }) {
 
       {image && (
         <div
-          className={`absolute top-[-2rem] left-[100%] ml-[1rem] w-[12rem] h-[14rem] transition-opacity duration-500 ${hovered ? "opacity-100" : "opacity-0"}`}
+          className={`absolute top-[-2rem] left-[95%] ml-[1.25rem] w-[14rem] h-[14rem]  transition-opacity duration-500 ${hovered ? "opacity-100" : "opacity-0"}`}
         >
           <img
             src={image}
             alt="Project Preview"
-            className="absolute w-[85%] h-[85%] object-cover rounded-[1rem] translate-y-[-0.5rem] translate-x-[-13.5rem]"
+            className="absolute w-[75%] h-[85%] object-cover rounded-[1rem] translate-y-[-0.5rem] translate-x-[-13.5rem]"
           />
           <img
             src="/window-frame.svg"
             alt="Project Frame"
-            className="absolute w-full h-full object-cover rounded-[1rem] translate-y-[-2rem] translate-x-[-14.5rem]"
+            className="absolute w-[full] h-full object-cover translate-y-[-2rem] translate-x-[-14.5rem]"
           />
         </div>
       )}

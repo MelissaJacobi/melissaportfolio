@@ -64,7 +64,7 @@ export default function quackattack({ params }) {
              the mastermind behind the farm's plight.
             </p>
           </div>
-          <div className="flex  bg-[#1d1d1d] p-5">
+          <div className="flex  bg-[var(--secondary)] p-5">
             <div>
               <h2  className="font-mitr font-semibold text-[2rem]">My Role</h2>
               <p className="font-quicksand leading-[2rem]">
@@ -89,7 +89,7 @@ export default function quackattack({ params }) {
           <h2 className="font-mitr font-semibold text-[2rem]">Characters</h2>
           <div className="grid grid-cols-3 gap-4">
             {characters.map((char, index) => (
-              <div key={index} className="relative group overflow-hidden bg-[#1d1d1d] h-[10rem] flex items-center justify-center">
+              <div key={index} className="relative group overflow-hidden bg-[var(--secondary)] h-[10rem] flex items-center justify-center">
                 <img 
                   src={char.image} 
                   alt={char.name} 

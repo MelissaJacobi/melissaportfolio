@@ -34,18 +34,18 @@ const Navbar = () => {
     <>
       {/* Navigation Bar */}
       <nav
-        className="sticky top-0 z-[9998] flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] bg-black/75 transition-colors duration-300 backdrop-blur-sm"
+        className="sticky top-0 z-[9997] flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] border-y-solid border-y-[0.7px] border-y-black bg-[var(--secondary)] transition-colors duration-300 backdrop-blur-sm"
         style={{ height: "4rem" }}
       >
         {/* Links visible on large screens */}
         <div className="hidden lg:flex space-x-4">
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
-            <Link href="/home">Home</Link>
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+            <Link href="/">Home</Link>
           </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/design">Design</Link>
           </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/uiux">UI/UX</Link>
           </button>
           {/*}
@@ -53,10 +53,10 @@ const Navbar = () => {
             <Link href="/video">Video</Link>
           </button>
           */}
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/contact">Contact</Link>
           </button>
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/about">About</Link>
           </button>
         </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 p-4 z-[9999]">
         <Link href="/">
           <img
-            src="/logo.png"
+            src="/logowhite.png"
             alt="Logo"
             className="w-[7rem] h-auto transition-all duration-300 cursor-pointer"
           />
@@ -80,13 +80,13 @@ const Navbar = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div
-          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-[rgb(255,164,0)] ${isOpen ? "rotate-45 translate-y-2" : "hover:translate-x-1"}`}
+          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-white border-[0.7px] border-black border-solid ${isOpen ? "rotate-45 translate-y-2" : "hover:translate-x-1"}`}
         ></div>
         <div
-          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-[rgb(255,164,0)] ${isOpen ? "opacity-0" : "hover:scale-125"}`}
+          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-white border-[0.7px] border-black border-solid ${isOpen ? "opacity-0" : "hover:scale-125"}`}
         ></div>
         <div
-          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-[rgb(255,164,0)]
+          className={`w-8 h-[0.25rem] rounded-full mb-1 transition-all duration-300 bg-white border-[0.7px] border-black border-solid
           ${isOpen ? "-rotate-45 -translate-y-2" : "hover:translate-x-1"}`}
         ></div>
       </div>
@@ -95,7 +95,7 @@ const Navbar = () => {
       <div
         className={`fixed top-0 right-0 bottom-0 z-30 transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } w-screen h-full bg-black/85 backdrop-blur-[0.3rem] shadow-lg p-10 flex flex-col space-y-4`}
+        } pt-[5rem] z-[9998] w-screen h-full bg-[#425cc7]/85 backdrop-blur-[0.3rem] shadow-lg p-10 flex flex-col space-y-4`}
       >
         {[
           { href: "/", label: "Home" },

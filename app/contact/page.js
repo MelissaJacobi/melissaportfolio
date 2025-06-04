@@ -51,7 +51,7 @@ export default function Contact() {
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                className="w-full border-b border-white bg-transparent text-white focus:outline-none focus:border-gray-300 p-1 font-quicksand focus:bg-transparent focus:translate-y-1 duration-300"
+                className="w-full border-b border-[var(--foreground)] bg-transparent text-[var(--foreground)] focus:outline-none p-1 font-quicksand focus:bg-transparent focus:translate-y-1 duration-300"
                 required
               />
             </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                className="w-full border-b border-white bg-transparent text-white focus:outline-none focus:border-gray-300 p-1 font-quicksand focus:bg-transparent focus:translate-y-1 duration-300"
+                className="w-full border-b border-[var(--foreground)] bg-transparent text-[var(--foreground)] focus:outline-none p-1 font-quicksand focus:bg-transparent focus:translate-y-1 duration-300"
                 required
               />
             </div>
@@ -69,24 +69,19 @@ export default function Contact() {
                 name="message"
                 placeholder="Your Message"
                 rows="4"
-                className="w-full border-b border-white bg-transparent text-white focus:outline-none focus:border-gray-300 p-1 font-quicksand focus:bg-transparent focus:translate-y-1 duration-300"
+                className="w-full border-b border-[var(--foreground)] bg-transparent text-[var(--foreground)] focus:outline-none p-1 font-quicksand focus:bg-transparent focus:translate-y-1 duration-300"
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="z-10 w-full bg-white text-black py-2 rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
+              className="z-10 w-full border-[var(--foreground)] border-[0.7px] border-solid bg-white text-black py-2 rounded-[3rem] font-quicksand font-bold duration-300 hover:translate-y-1 transition"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
         </main>
-        <img
-          src="/contact-me.svg"
-          alt="contact me photo"
-          className="absolute w-full h-full object-cover hidden md:block"
-        />
       </div>
     </>
   );

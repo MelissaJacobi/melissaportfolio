@@ -1,8 +1,7 @@
-"use client"; // This marks the file as a Client Component
+"use client";
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaChevronDown } from "react-icons/fa6";
 
 export default function Header() {
   const pathname = usePathname();
@@ -32,9 +31,9 @@ export default function Header() {
   }, []);
 
   const parallaxPixelAdjustments = {
-    desktop: [-50, -50, -50, -10], 
+    desktop: [-10, -10, -10, 10],
     tablet: [-20, -20, -50, 20],
-    mobile: [-70, -70, -80, 20],
+    mobile: [-70, -70, -80, -50],
   };
 
   const parallaxSpeeds = [0.05, 0.15, 0.2, 0.3];
@@ -46,29 +45,37 @@ export default function Header() {
   return (
     <header>
       <div className="relative w-full h-[calc(100vh-5rem)] overflow-hidden bg-white">
-        {/* Parallax Images (1-4) */}
-        {[1, 2, 3, 4].map((num, index) => (
+        {/* Parallax Images */}
+        {screenSize === "mobile" ? (
           <img
-            key={num}
-            src={`/${num}.svg`}
-            alt={`Parallax Layer ${num}`}
-            className="absolute w-[110%]"
+            src="/4.svg"
+            alt="Mobile Parallax"
+            className="absolute w-[200%] scale-[2]"
             style={{
-              transform: `translateY(calc(${-scrollY * parallaxSpeeds[index]}px + ${parallaxPixelAdjustments[screenSize][index]}px))`,
+              transform: `scale(1.4) translateY(calc(${-scrollY * parallaxSpeeds[3]}px + ${parallaxPixelAdjustments.mobile[3]}px))`,
               bottom: 0,
               left: 0,
             }}
           />
-        ))}
+        ) : (
+          [1, 2, 3, 4].map((num, index) => (
+            <img
+              key={num}
+              src={`/${num}.svg`}
+              alt={`Parallax Layer ${num}`}
+              className="absolute w-[110%]"
+              style={{
+                transform: `translateY(calc(${-scrollY * parallaxSpeeds[index]}px + ${parallaxPixelAdjustments[screenSize][index]}px))`,
+                bottom: 0,
+                left: 0,
+              }}
+            />
+          ))
+        )}
 
-        {/* Header Text & Foreground Image */}
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center relative">
-          {/* Header Text */}
-          <h1 className="font-Mitr text-[4rem] w-full text-center font-bold text-white p-2 bg-black/40 backdrop-blur-[0.2rem] translate-y-10 relative z-10">
-            MELISSA JACOBI
-          </h1>
 
-          {/* 5.svg - Foreground Layer (Above H1) */}
+        {/* Foreground Layer 5 */}
+        {screenSize !== "mobile" && (
           <img
             src="/5.svg"
             alt="Parallax Layer 5"
@@ -79,7 +86,7 @@ export default function Header() {
               left: 0,
             }}
           />
-        </div>
+        )}
       </div>
     </header>
   );
