@@ -2,9 +2,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,19 +18,23 @@ const Navbar = () => {
       }
     };
 
+
     window.addEventListener("scroll", handleScroll);
+
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto"; // Ensure cleanup
     };
-  }, [isOpen]); 
+  }, [isOpen]);
+
 
   return (
     <>
@@ -62,6 +68,7 @@ const Navbar = () => {
         </div>
       </nav>  
 
+
       {/* Logo */}
       <div className="fixed top-0 left-0 p-4 z-[9999]">
         <Link href="/">
@@ -73,7 +80,8 @@ const Navbar = () => {
         </Link>
       </div>
 
-      
+
+     
       {/* Hamburger Menu (Visible on medium screens and below) */}
       <div
         className="fixed top-0 right-0 p-4 z-[9999] flex flex-col items-center justify-center cursor-pointer transition-all duration-300 lg:hidden"
@@ -90,6 +98,7 @@ const Navbar = () => {
           ${isOpen ? "-rotate-45 -translate-y-2" : "hover:translate-x-1"}`}
         ></div>
       </div>
+
 
       {/* Menu Overlay */}
       <div
@@ -114,8 +123,13 @@ const Navbar = () => {
         ))}
       </div>
 
+
     </>
   );
 };
 
+
 export default Navbar;
+
+
+
