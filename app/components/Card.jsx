@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react"; // Make sure lucide-react is installed
+import { ArrowRight } from "lucide-react";
 
 export default function Card({ imgUrl, projectName, softwares }) {
   return (
     <Link href={`/${encodeURIComponent(projectName?.toLowerCase() || '')}`}>
-      <div className="relative group w-[25rem] h-[30rem] overflow-hidden shadow-md duration-300 cursor-pointer">
+      <div className="relative group w-[25rem] h-[30rem] overflow-hidden shadow-md duration-300 cursor-pointer border-solid border-[var(--forground)] border-[0.7px] ">
         {/* Image */}
         <img
           src={imgUrl}
@@ -16,7 +16,7 @@ export default function Card({ imgUrl, projectName, softwares }) {
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-[var(--background-half)] opacity-0 group-hover:opacity-100 duration-300">
-          <div className="absolute bottom-0 left-0 w-full bg-[var(--background)] bg-opacity-50 p-4 flex justify-between items-center">
+          <div className="absolute bottom-0 left-0 w-full bg-[var(--secondary)] bg-opacity-50 p-4 flex justify-between items-center">
             <div>
               <h2 className="font-mitr text-2xl font-semibold text-[var(--foreground)]">
                 {projectName}

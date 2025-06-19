@@ -8,17 +8,16 @@
 
 :root {
   --background: #fff;
-  --background-half: rgba(255, 255, 255, 0.50);
-  --foreground: #000000;
+  --background-half: rgba(255, 164, 0, 0.50);
+  --foreground: rgb(0, 8, 35);
   --secondary: rgba(255, 164, 0, 0.75);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000;
-    --foreground: #fff;
-    --secondary: rgba(66, 92, 199, 0.75);
-  }
+.dark-mode {
+  --background: rgb(0, 8, 35);
+  --background-half: rgba(0, 8, 35, 0.50);
+  --foreground: #fff;
+  --secondary: rgba(66, 92, 199, 0.75);
 }
 
 body {
