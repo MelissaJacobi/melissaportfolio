@@ -10,7 +10,8 @@ export default function aquahorse({ params }) {
   const projectName = params?.projectName || "";
 
   const projects = [
-    { name: "thewerx", url: "/thewerx", image: "/werx-cover.png" },
+
+    { name: "wcddp", url: "/wcddp", image: "/social_graphic_01.jpg" },
   ];
   const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];

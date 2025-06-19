@@ -10,7 +10,7 @@ export default function wcddp({ params }) {
   const projectName = params?.projectName || "";
 
   const projects = [
-    { name: "AquaHorse", url: "/aquahorse", image: "/aqua-next.jpg" },
+    { name: "JaredWalker", url: "/jaredwalker", image: "/jared-walker-cover.png" },
   ];
   const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];

@@ -10,7 +10,7 @@ export default function thewerx({ params }) {
   const projectName = params?.projectName || "";
 
   const projects = [
-    { name: "ITB", url: "/itb", image: "/itb-parts-cover.png" },
+    { name: "AquaHorse", url: "/aquahorse", image: "/aqua-next.jpg" },
   ];
   const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
