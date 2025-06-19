@@ -6,18 +6,13 @@ import Footer from "../components/Footer";
 export default function Design() {
   const projects = [
     {
+      imgUrl: "/itb-parts-cover.png",
+      projectName: "ITB",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator", "html", "turn.js", "javascript"],
+    },
+    {
       imgUrl: "/can-mockup.png",
       projectName: "Driftstone",
-      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
-    },
-    {
-      imgUrl: "/wcddp-cover.png",
-      projectName: "WCDDP",
-      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
-    },
-    {
-      imgUrl: "/aqua-horse-mockup.png",
-      projectName: "AquaHorse",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
@@ -26,9 +21,14 @@ export default function Design() {
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
-      imgUrl: "/itb-parts-cover.png",
-      projectName: "ITB",
-      softwares: ["Adobe Photoshop", "Adobe Illustrator", "html", "turn.js", "javascript"],
+      imgUrl: "/aqua-horse-mockup.png",
+      projectName: "AquaHorse",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
+    },
+    {
+      imgUrl: "/wcddp-cover.png",
+      projectName: "WCDDP",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
       imgUrl: "/jared-walker-cover.png",

@@ -11,7 +11,7 @@ export default function itb({ params }) {
   const projectName = params?.projectName || "";
 
   const projects = [
-    { name: "JaredWalker", url: "/jaredwalker", image: "/jared-walker-cover.png" },
+    { name: "driftstone", url: "/driftstone", image: "/driftstone-hero.jpg" },
   ];
   const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
