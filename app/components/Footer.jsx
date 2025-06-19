@@ -4,7 +4,7 @@ import { CiLinkedin } from "react-icons/ci";
 
 export default function Footer() {
   return (
-    <footer className="border-y-solid border-y-[0.7px] border-y-black bg-[var(--secondary)] py-6 font-quicksand mt-auto">
+    <footer className="border-y-solid border-y-[0.7px]  border-y-[var(--foreground)] bg-[var(--secondary)] py-6 font-quicksand mt-auto">
       <div className="container mx-auto text-center">
         <p className="text-sm mt-2"></p>
         <p className="text-sm mt-2">

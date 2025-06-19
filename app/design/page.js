@@ -11,6 +11,31 @@ export default function Design() {
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
     },
     {
+      imgUrl: "/wcddp-cover.png",
+      projectName: "WCDDP",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
+    },
+    {
+      imgUrl: "/aqua-horse-mockup.png",
+      projectName: "AquaHorse",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
+    },
+    {
+      imgUrl: "/werx-cover.png",
+      projectName: "TheWerx",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
+    },
+    {
+      imgUrl: "/itb-parts-cover.png",
+      projectName: "ITB",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator", "html", "turn.js", "javascript"],
+    },
+    {
+      imgUrl: "/jared-walker-cover.png",
+      projectName: "JaredWalker",
+      softwares: ["Adobe Photoshop"],
+    },
+    {
       imgUrl: "/gatsby-cover.png",
       projectName: "Gatsby",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],
@@ -35,7 +60,7 @@ export default function Design() {
 
   return (
     <>
-      <div className="flex flex-wrap gap-10 p-10 ">
+      <div className="flex flex-wrap justify-center gap-10 p-10 ">
         {projects.map((project, index) => (
           <Card
             key={index}

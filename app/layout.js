@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ThemeToggle from "./components/ThemeToggle";
 
 export const metadata = {
   title: "Melissa's Portfolio",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <ThemeToggle />
       </body>
     </html>
   );

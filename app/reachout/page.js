@@ -65,7 +65,7 @@ export default function Reachout({ params }) {
   const router = useRouter();
 
   const projects = [
-    { name: "driftstone", url: "/driftstone", image: "/driftstone-hero.jpg" },
+    { name: "Hivefive", url: "/hivefive", image: "/hivefive.jpg" },
   ];
   const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
@@ -186,7 +186,7 @@ export default function Reachout({ params }) {
         <h2 className="font-mitr font-semibold text-[2rem] mb-[2rem]">Discoveries</h2>
         <div className="mt-4 space-y-12">
           {discoveryText.map((sentence, sentenceIndex) => (
-            <div key={sentenceIndex} className="text-2xl font-quicksand text-black">
+            <div key={sentenceIndex} className="text-2xl font-quicksand text-[var(--foreground)]">
               {sentence.split(" ").map((word, wordIndex) => (
                 <motion.span
                   key={wordIndex}

@@ -40,7 +40,7 @@ const Navbar = () => {
     <>
       {/* Navigation Bar */}
       <nav
-        className="sticky top-0 z-[9997] flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] border-y-solid border-y-[0.7px] border-y-black bg-[var(--secondary)] transition-colors duration-300 backdrop-blur-sm"
+        className="sticky top-0 z-[9997] flex justify-center items-center h-[4rem] px-4 lg:px-[7rem] border-y-solid border-y-[0.7px] border-y-[var(--foreground)] bg-[var(--secondary)] transition-colors duration-300 backdrop-blur-sm"
         style={{ height: "4rem" }}
       >
         {/* Links visible on large screens */}
