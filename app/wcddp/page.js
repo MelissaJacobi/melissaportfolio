@@ -18,7 +18,7 @@ export default function wcddp({ params }) {
   return (
     <div className="p-6 flex flex-col items-center w-full  overflow-hidden">
       <div className="relative flex justify-center w-full max-w-[70rem]">
-        <img src="wcddp-header.png" className="w-full object-cover mt-24 mb-8" />
+        <img src="wcddp-Header.png" className="w-full object-cover mt-24 mb-8" />
       </div>
 
       <div className="w-full max-w-[70rem] mt-32 flex flex-col lg:flex-row justify-between gap-6">
