@@ -11,7 +11,7 @@ export default function hivefive({ params }) {
       const router = useRouter();
     
         const projects = [
-        { name: "wcddp", url: "/wcddp", image: "/social_graphic_01.jpg" },
+        { name: "tutorial", url: "/tutorial", image: "/finch-cover.png" },
       ];
       const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === projectName.toLowerCase());
       const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];

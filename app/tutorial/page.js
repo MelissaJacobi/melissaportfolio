@@ -17,7 +17,7 @@ export default function tutorial({ params }) {
   };
 
   const projects = [
-    { name: "Violin", url: "/violin", image: "/violin-tut.webp" },
+    { name: "ITB", url: "/itb", image: "/itb-parts-cover.png" },
   ];
   const currentIndex = projects.findIndex((p) => p.name.toLowerCase() === (projectName?.toLowerCase() || ""));
   const nextProject = projects[(currentIndex + 1) % projects.length] || projects[0];
@@ -29,7 +29,7 @@ export default function tutorial({ params }) {
       <div className={styles.mainSection}>
         <div className={styles.mainImageContainer}>
           <div className={styles.videoWrapper}>
-            <video ref={videoRef} className={`${styles.mainImage}  border-solid border-4 border-[#3a8690]`} autoPlay loop muted={isMuted}>
+            <video ref={videoRef} className={`${styles.mainImage}`} autoPlay loop muted={isMuted}>
               <source src="/finch.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>

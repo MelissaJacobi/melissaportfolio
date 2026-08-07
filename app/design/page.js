@@ -36,6 +36,11 @@ export default function Design() {
       softwares: ["Adobe Photoshop"],
     },
     {
+      imgUrl: "/RSC-poster.png",
+      projectName: "StringCamp",
+      softwares: ["Adobe Photoshop", "Adobe Illustrator"],
+    },
+    {
       imgUrl: "/gatsby-cover.png",
       projectName: "Gatsby",
       softwares: ["Adobe Photoshop", "Adobe Illustrator"],

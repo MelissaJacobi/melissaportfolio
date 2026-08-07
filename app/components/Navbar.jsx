@@ -54,11 +54,10 @@ const Navbar = () => {
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/uiux">UI/UX</Link>
           </button>
-          {/*}
-          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] text-white font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
+
+          <button className="font-quicksand px-4 py-2 m-2 w-[7rem] font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/video">Video</Link>
           </button>
-          */}
           <button className="font-quicksand px-4 py-2 m-2 w-[7rem] font-normal text-lg duration-300 hover:translate-y-1 opacity-100">
             <Link href="/contact">Contact</Link>
           </button>
@@ -104,7 +103,7 @@ const Navbar = () => {
       <div
         className={`fixed top-0 right-0 bottom-0 z-30 transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } pt-[5rem] z-[9998] w-screen h-full bg-[#425cc7]/85 backdrop-blur-[0.3rem] shadow-lg p-10 flex flex-col space-y-4`}
+        } pt-[5rem] z-[9998] w-screen h-full bg-[var(--secondary)] backdrop-blur-[0.3rem] shadow-lg p-10 flex flex-col space-y-4`}
       >
         {[
           { href: "/", label: "Home" },
@@ -112,11 +111,12 @@ const Navbar = () => {
           { href: "/about", label: "About" },
           { href: "/design", label: "Design" },
           { href: "/uiux", label: "UI/UX" },
+          { href: "/video", label: "Video" },
         ].map((item) => (
           <button
             key={item.href}
             onClick={() => setIsOpen(false)}
-            className="text-white font-quicksand text-lg text-left hover:translate-x-1 transition"
+            className="text-[var(--foreground)] font-quicksand text-lg text-left hover:translate-x-1 transition"
           >
             <Link href={item.href}>{item.label}</Link>
           </button>
